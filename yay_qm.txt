@@ -1,0 +1,10 @@
+crossover 3.1.5-1
+gnome-shell-extension-dash-to-dock 1:79-1
+gnome-shell-extension-gsconnect 1:54-1
+gnome-shell-extension-just-perfection-desktop 24-1
+gnome-zoomer-git 1.0-2
+linux-wifi-hotspot 4.4.0-1
+oh-my-zsh-git r6807.cc73a929f-1
+wayback-spn-script-git 1.0-2
+xdg-ninja-git r301.7a09db6-1
+yay 12.0.2-1

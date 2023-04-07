@@ -49,17 +49,17 @@ unset TERMCAP
 # Man is much better than us at figuring this out
 unset MANPATH
 
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_STATE_HOME="${HOME}/.local/state"
+export XDG_CACHE_HOME="${HOME}/.cache"
 
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
-export HISTFILE="$XDG_STATE_HOME"/zsh/history
-export ZDOTDIR="$HOME"/.config/zsh
+export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
+export HISTFILE="${XDG_STATE_HOME}/zsh/history"
+export ZDOTDIR="${HOME}/.config/zsh"
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME}/vim/vimrc"
-export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-export SQLITE_HISTORY="$XDG_STATE_HOME"/sqlite_history
-export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
+export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
+export SQLITE_HISTORY="${XDG_STATE_HOME}/sqlite_history"
+export PARALLEL_HOME="${XDG_CONFIG_HOME}/parallel"
 export PYTHONSTARTUP="/etc/python/pythonrc"
-export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+export GRADLE_USER_HOME="${XDG_DATA_HOME}/gradle"

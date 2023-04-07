@@ -17,13 +17,13 @@
 
     ```
     tfp@archlinux  ~/Dev/etc/dotfiles   main 
-    ➜ sudo chown -R $(whoami) _system
+    ➜ sudo chown -R $(whoami):$(whoami) _system
     ```
-
-    Some editing...
+    
+    *Do some editing...*
 
     ```
     tfp@archlinux  ~/Dev/etc/dotfiles   main 
-    ➜ sudo chown -R root _system                                      
+    ➜ sudo chown -R root:root _system                                      
     ```
 

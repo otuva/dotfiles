@@ -6,3 +6,6 @@
 ```
 # stow -t / profile pacman ...
 ```
+
+
+[For nvidia - Preserve video memory after suspend](https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks#Preserve_video_memory_after_suspend)

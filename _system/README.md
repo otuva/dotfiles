@@ -7,5 +7,23 @@
 # stow -t / profile pacman ...
 ```
 
+## Notes
 
-[For nvidia - Preserve video memory after suspend](https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks#Preserve_video_memory_after_suspend)
+- [For nvidia - Preserve video memory after suspend](https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks#Preserve_video_memory_after_suspend)
+
+- Environment is for gnome 
+
+- After editing system configs make sure to chown root
+
+    ```
+    tfp@archlinux  ~/Dev/etc/dotfiles   main 
+    ➜ sudo chown -R $(whoami) _system
+    ```
+
+    Some editing...
+
+    ```
+    tfp@archlinux  ~/Dev/etc/dotfiles   main 
+    ➜ sudo chown -R root _system                                      
+    ```
+

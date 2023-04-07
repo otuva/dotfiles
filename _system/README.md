@@ -27,3 +27,6 @@
     ➜ sudo chown -R root:root _system                                      
     ```
 
+- Just copy and do not use stow with:
+    - zram-generator
+    - nvidia

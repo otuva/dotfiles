@@ -1,0 +1,4 @@
+[Context]
+sockets=!cups;!pcsc
+filesystems=!xdg-documents
+persistent=Documents

@@ -1,0 +1,4 @@
+[Context]
+devices=!all;dri
+filesystems=!~/.steam;!xdg-run/app/com.discordapp.Discord;!xdg-documents;!xdg-desktop;!xdg-data/lutris;!~/Games/Heroic;!xdg-data/applications;!/run/media;!/run/udev;!~/.var/app/com.valvesoftware.Steam;!xdg-data/Steam
+persistent=.

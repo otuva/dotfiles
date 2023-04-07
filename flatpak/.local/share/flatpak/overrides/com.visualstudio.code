@@ -1,0 +1,12 @@
+[Context]
+sockets=!ssh-auth;!pulseaudio;wayland;!x11
+devices=!all;dri
+features=!devel
+filesystems=!xdg-config/kdeglobals;!xdg-config/gtk-3.0;~/Dev;!host
+persistent=.
+
+[System Bus Policy]
+org.freedesktop.login1=none
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=none

@@ -1,0 +1,9 @@
+[Context]
+sockets=!ssh-auth
+devices=!all;kvm;dri
+features=!multiarch
+filesystems=!xdg-run/keyring;!host
+persistent=.
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=none

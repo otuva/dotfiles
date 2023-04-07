@@ -1,0 +1,93 @@
+#!/bin/bash
+
+VOWELS=("a" "e" "i" "o" "u")
+CONSANANTS=("b" "c" "d" "f" "g" "h" "j" "k" "l" "m" "n" "p" "r" "s" "t" "v" "w" "x" "y" "z")
+
+# [3,9]
+#               [0,6]
+LENGTH=$((3 + ($RANDOM % 7)))
+NAME=""
+
+VOWEL_SEARCH() {
+    local SEARCH_VALUE=$1
+    for current_vowel_index in "${!VOWELS[@]}"; do
+       if [[ "${VOWELS[${current_vowel_index}]}" == "${SEARCH_VALUE}" ]]; then
+           echo "${current_vowel_index}";
+       fi
+    done
+}
+FUNCTION_A() { # th
+    local STRING=$1
+    local INDEX=$2
+    local LAST_CHARACTER="${STRING: -1}"
+    if [[ ${INDEX} > 0 ]]; then
+        if echo "dtsgjckpr" | grep -q ${LAST_CHARACTER}; then
+            echo 'u'
+        fi
+    fi
+}
+FUNCTION_B() { # ea
+    local STRING=$1
+    local LAST_CHARACTER="${STRING: -1}"
+    if [[ ${LAST_CHARACTER} == 'e' ]]; then
+        echo 'u'
+    fi
+}
+FUNCTION_C() { # au ou
+    local STRING=$1
+    local INDEX=$2
+    local LAST_CHARACTER="${STRING: -1}"
+
+    if [[ ${INDEX} > 0 ]]; then
+        if echo "oa" | grep -q ${LAST_CHARACTER}; then
+            echo 'u'
+        fi
+    fi
+}
+FUNCTION_D() { # aux
+    local STRING=$1
+    local INDEX=$2
+
+    local LAST_CHARACTERS="${STRING: -2}"
+    local is_last=$((${LENGTH}-${INDEX}))
+
+    if [[ ${LAST_CHARACTERS} == 'au' && ${is_last} -eq 1 ]]; then
+        echo 'x'
+    fi
+}
+FUNCTION_E() { # ending y
+    local STRING=$1
+    local INDEX=$2
+
+    local is_last=$((${LENGTH}-${INDEX}))
+
+    if [[ ${is_last} -eq 1 ]]; then
+        echo 'y'
+    fi
+}
+
+MODIFIERS=(FUNCTION_A FUNCTION_B FUNCTION_C FUNCTION_D FUNCTION_E)
+
+main() {
+    for ((current_length=0; current_length<${LENGTH}; current_length++))
+    do
+        local LETTER=""
+        # call random function from MODIFIERS array
+        local MOD=$("${MODIFIERS[$(($RANDOM % 5))]}" ${NAME} ${current_length} ${LENGTH})
+        
+        if [[ -n ${MOD} ]]; then
+            current_length=$(($current_length + ${#MOD}))
+            NAME="${NAME}${MOD}"
+        elif [[ -z $(VOWEL_SEARCH ${NAME: -1}) ]];then
+            LETTER=${VOWELS[$((${RANDOM} % 5))]}
+        else
+            LETTER=${CONSANANTS[$((${RANDOM} % 20))]}
+        fi
+
+        NAME="${NAME}${LETTER}"
+    done
+
+    echo "$NAME"
+}
+
+main

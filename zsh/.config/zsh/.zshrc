@@ -115,8 +115,6 @@ alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 alias docker="sudo docker"
 alias up="yay -Syu"
 alias random-string="openssl rand -base64 16"
-alias random-nick='/usr/bin/bash /opt/bin/create-nick'
-alias random-nick-node='/usr/bin/node /opt/bin/usernique.js'
 alias ip="ip -c -h -p"
 alias cp="cp -i"                          # confirm before overwriting something
 alias rm="rm -i"			  # confirm before deleting
@@ -144,16 +142,6 @@ len()
 wayback()
 {
     spn -a "$(secret-tool lookup wayback accesskey):$(secret-tool lookup wayback secretkey)" "$1"
-}
-
-waydroid-reinstall()
-{
-    waydroid session stop
-    yay -Rnsc waydroid
-    sudo rm -rf /var/lib/waydroid ~/.local/share/waydroid /usr/share/waydroid-extra
-    yay -S waydroid
-    sudo waydroid init -f
-    sudo systemctl enable waydroid-container.service
 }
 
 # ---------------------------------------------------------------

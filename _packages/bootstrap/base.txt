@@ -1,0 +1,16 @@
+stow
+zsh
+mpv
+btop
+exa 
+bat
+fd 
+duf
+ripgrep 
+ttf-terminus-nerd
+oh-my-zsh-git
+zsh-syntax-highlighting
+zsh-autosuggestions
+papirus-icon-theme
+archlinux-wallpaper
+neofetch

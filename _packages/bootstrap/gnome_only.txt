@@ -1,0 +1,6 @@
+gpaste
+python-nautilus
+gnome-shell-extension-appindicator 
+gnome-shell-extension-dash-to-dock 
+gnome-shell-extension-gsconnect 
+gnome-shell-extension-just-perfection-desktop

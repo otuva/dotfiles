@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 const vowels = ["a","e","i","o","u"];
 const consanants = ["b","c","d","f","g","h","j","k","l","m","n","p","r","s","t","v","w","x","y","z"];

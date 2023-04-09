@@ -1,0 +1,7 @@
+#!/bin/bash
+
+temp_var=$1
+if [[ -z ${temp_var}  ]]; then
+	read temp_var
+fi
+echo "${#temp_var}"

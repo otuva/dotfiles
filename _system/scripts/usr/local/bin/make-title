@@ -1,0 +1,16 @@
+#!/usr/bin/python
+
+import sys
+
+if len(sys.argv) == 2:
+    user_word = sys.argv[1]
+    word_max_len = (len(user_word) * 2 + len(user_word))
+elif len(sys.argv) == 3 and sys.argv[2].isnumeric():
+    user_word = sys.argv[1]
+    word_max_len = int(sys.argv[2])
+else:
+    sys.exit(1)
+
+print(''.center(word_max_len, '-'))
+print(user_word.replace(' ', '-').center(word_max_len, '-'))
+print(''.center(word_max_len, '-'))

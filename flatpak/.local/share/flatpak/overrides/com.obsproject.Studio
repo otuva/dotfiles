@@ -1,0 +1,14 @@
+[Context]
+sockets=!x11
+devices=!all;dri
+filesystems=!xdg-config/kdeglobals;!xdg-run/pipewire-0;!host
+persistent=OBS
+
+[System Bus Policy]
+org.freedesktop.Avahi=none
+
+[Session Bus Policy]
+com.canonical.AppMenu.Registrar=none
+org.freedesktop.Flatpak=none
+org.a11y.Bus=none
+org.kde.StatusNotifierItem-2-2=none

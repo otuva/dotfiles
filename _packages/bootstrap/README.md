@@ -27,6 +27,10 @@ Add your archive.org api key to secret-tool
 - `secret-tool store --label "Wayback - accesskey" wayback accesskey`
 - `secret-tool store --label "Wayback - secretkey" wayback secretkey`
 
+Patch agnoster theme prompt
+
+- `sudo sed -i 's,echo -n "%{%f%}",echo -n "\\e[m\\n\E2\9E\9C%{%f%}",g' /usr/share/oh-my-zsh/themes/agnoster.zsh-theme`
+
 ```
 sudo rm /etc/environment /etc/pacman.conf /etc/profile
 mkdir -p ~/.local/state/zsh/

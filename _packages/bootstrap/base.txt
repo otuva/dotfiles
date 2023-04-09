@@ -6,7 +6,8 @@ exa
 bat
 fd 
 duf
-ripgrep 
+ripgrep
+ttf-dejavu-nerd
 ttf-terminus-nerd
 oh-my-zsh-git
 xdg-ninja-git

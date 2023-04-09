@@ -1,5 +1,6 @@
 gpaste
 python-nautilus
+gnome-zoomer-git
 gnome-shell-extension-appindicator 
 gnome-shell-extension-dash-to-dock 
 gnome-shell-extension-gsconnect 

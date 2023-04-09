@@ -11,10 +11,21 @@ Install packages
 
 - `yay -S - < _packages/bootstrap/base.txt`
 
-If on gnome install gnome specific packages too
+If on gnome, install gnome specific packages too
 
 - `yay -S - < _packages/bootstrap/gnome_only.txt`
 
+Gnome settings
+
+- Dump:
+    - `dconf dump / > gnome_settings.txt`
+- Load
+    - `dconf load / < gnome_settings.txt`
+
+Add your archive.org api key to secret-tool
+
+- `secret-tool store --label "Wayback - accesskey" wayback accesskey`
+- `secret-tool store --label "Wayback - secretkey" wayback secretkey`
 
 ```
 sudo rm /etc/environment /etc/pacman.conf /etc/profile

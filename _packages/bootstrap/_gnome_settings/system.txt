@@ -1,0 +1,86 @@
+[org/gnome/terminal/legacy]
+theme-variant='dark'
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'us'), ('xkb', 'tr')]
+xkb-options=['terminate:ctrl_alt_bksp']
+
+[org/gnome/desktop/calendar]
+show-weekdate=true
+
+[org/gnome/baobab/ui]
+is-maximized=true
+
+[org/gnome/desktop/wm/preferences]
+button-layout='appmenu:minimize,maximize,close'
+titlebar-font='Cantarell Bold 11'
+workspace-names=@as []
+
+[org/gnome/desktop/interface]
+clock-show-seconds=true
+clock-show-weekday=true
+color-scheme='prefer-dark'
+document-font-name='Cantarell 11'
+enable-animations=false
+font-antialiasing='grayscale'
+font-hinting='full'
+font-name='Cantarell 11'
+gtk-theme='Adwaita-dark'
+icon-theme='Papirus-Dark'
+monospace-font-name='Source Code Pro 10'
+show-battery-percentage=true
+text-scaling-factor=1.25
+toolkit-accessibility=false
+
+[org/gnome/evince/default]
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=true
+show-sidebar=true
+sidebar-page='thumbnails'
+sidebar-size=132
+sizing-mode='free'
+window-ratio=(1.5655868239078561, 1.2353161242050124)
+zoom=1.4399999999999995
+
+[org/gnome/nautilus/compression]
+default-compression-format='7z'
+
+[org/gnome/nautilus/icon-view]
+default-zoom-level='medium'
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+search-view='list-view'
+show-delete-permanently=false
+
+[org/gnome/mutter]
+attach-modal-dialogs=true
+experimental-features=['scale-monitor-framebuffer']
+
+[org/gnome/photos]
+window-maximized=true
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-schedule-automatic=true
+night-light-temperature=uint32 2700
+
+[org/gnome/shell]
+app-picker-layout=[{'455fce11-a23b-4bfc-84cc-0268dc4ba7d7': <{'position': <0>}>, '9815d30f-1bfe-4b71-8f4d-6e5088652dd6': <{'position': <1>}>, 'Utilities': <{'position': <2>}>, '03ca247d-646b-4f1c-ab84-6a885e56dffe': <{'position': <3>}>, '598604fe-c39b-4013-a501-00381ad7ef1d': <{'position': <4>}>, 'f1357cf2-efd3-4a8b-b31b-534a3e9b365d': <{'position': <5>}>, 'ce500ff8-31f8-4a29-bfdb-15ab5f0260da': <{'position': <6>}>, '3582d6b3-0022-4725-aa50-64c4e876d2f0': <{'position': <7>}>, 'mpv.desktop': <{'position': <8>}>, 'com.stremio.Stremio.desktop': <{'position': <9>}>}, {'461f8b41-4fe4-4c8b-b65c-2ef0fcd670ec': <{'position': <0>}>, '5f8382c0-1b09-4417-b6e4-716bfe7e9ce0': <{'position': <1>}>, '1ffe329c-a889-430e-b576-49065db045fe': <{'position': <2>}>}]
+command-history=['lg', 'r']
+disable-user-extensions=false
+disabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'just-perfection-desktop@just-perfection', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org']
+favorite-apps=['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'gnome-system-monitor.desktop', 'torbrowser.desktop', 'org.gnome.TextEditor.desktop', 'com.visualstudio.code.desktop']
+looking-glass-history=['r(0)._indicator._proxy.Id']
+remember-mount-password=true
+welcome-dialog-last-shown-version='43.3'
+
+[system/locale]
+region='en_IE.UTF-8'

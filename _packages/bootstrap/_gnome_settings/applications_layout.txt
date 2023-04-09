@@ -1,0 +1,64 @@
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST', '9815d30f-1bfe-4b71-8f4d-6e5088652dd6', '5f8382c0-1b09-4417-b6e4-716bfe7e9ce0', '461f8b41-4fe4-4c8b-b65c-2ef0fcd670ec', '455fce11-a23b-4bfc-84cc-0268dc4ba7d7', 'ce500ff8-31f8-4a29-bfdb-15ab5f0260da', '3582d6b3-0022-4725-aa50-64c4e876d2f0', '1ffe329c-a889-430e-b576-49065db045fe', '03ca247d-646b-4f1c-ab84-6a885e56dffe', 'f1357cf2-efd3-4a8b-b31b-534a3e9b365d', '598604fe-c39b-4013-a501-00381ad7ef1d', '41d004aa-d131-4fc7-8fb9-1d3d61260e49']
+
+[org/gnome/desktop/app-folders/folders/03ca247d-646b-4f1c-ab84-6a885e56dffe]
+apps=['com.github.johnfactotum.Foliate.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop', 'libreoffice-base.desktop', 'libreoffice-math.desktop', 'libreoffice-impress.desktop', 'libreoffice-draw.desktop', 'libreoffice-calc.desktop', 'tr.gov.uyap.Editor.desktop', 'tr.gov.uyap.Editor.Template.desktop']
+name='Office'
+
+[org/gnome/desktop/app-folders/folders/1ffe329c-a889-430e-b576-49065db045fe]
+apps=['com.valvesoftware.Steam.desktop', 'com.valvesoftware.SteamLink.desktop', 'com.heroicgameslauncher.hgl.desktop', 'GameConqueror.desktop', 'crossover.desktop']
+name='Games'
+
+[org/gnome/desktop/app-folders/folders/3582d6b3-0022-4725-aa50-64c4e876d2f0]
+apps=['org.mozilla.Thunderbird.desktop', 'org.telegram.desktop.desktop', 'com.github.Eloston.UngoogledChromium.desktop', 'org.qbittorrent.qBittorrent.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.Software.desktop', 'org.remmina.Remmina.desktop', 'org.getmonero.Monero.desktop']
+name='Internet'
+
+[org/gnome/desktop/app-folders/folders/41d004aa-d131-4fc7-8fb9-1d3d61260e49]
+apps=['Waydroid.desktop', 'waydroid.com.android.inputmethod.latin.desktop', 'waydroid.org.lineageos.jelly.desktop', 'waydroid.com.android.calculator2.desktop', 'waydroid.org.lineageos.etar.desktop', 'waydroid.com.android.camera2.desktop', 'waydroid.com.android.deskclock.desktop', 'waydroid.com.android.contacts.desktop', 'waydroid.com.android.documentsui.desktop', 'waydroid.com.android.gallery3d.desktop', 'waydroid.org.lineageos.eleven.desktop', 'waydroid.org.lineageos.recorder.desktop', 'waydroid.com.android.settings.desktop', 'waydroid.org.fdroid.fdroid.desktop', 'waydroid.com.aurora.store.desktop']
+name='Android'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/455fce11-a23b-4bfc-84cc-0268dc4ba7d7]
+apps=['org.gnome.Meld.desktop', 'org.gnome.Boxes.desktop', 'virt-manager.desktop', 'com.visualstudio.code.desktop', 'vim.desktop', 'org.gnome.GHex.desktop']
+name='Development'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/461f8b41-4fe4-4c8b-b65c-2ef0fcd670ec]
+apps=['qv4l2.desktop', 'qvidcap.desktop']
+name='Qt Sound & Video'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/598604fe-c39b-4013-a501-00381ad7ef1d]
+apps=['eu.qtrac.diffpdf.desktop', 'com.github.jeromerobert.pdfarranger.desktop']
+name='PDF'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/5f8382c0-1b09-4417-b6e4-716bfe7e9ce0]
+apps=['bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop']
+name='Internet'
+
+[org/gnome/desktop/app-folders/folders/9815d30f-1bfe-4b71-8f4d-6e5088652dd6]
+apps=['org.gnome.Weather.desktop', 'org.gnome.Maps.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Photos.desktop', 'org.gnome.Totem.desktop', 'simple-scan.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Cheese.desktop', 'org.gnome.GPaste.Ui.desktop', 'org.gnome.GPaste.Preferences.desktop', 'org.gnome.Music.desktop', 'torbrowser-settings.desktop', 'safeeyes.desktop', 'io.github.slgobinath.SafeEyes.desktop', 'shotwell.desktop']
+name='Accessories'
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['org.gnome.DiskUtility.desktop', 'org.gnome.baobab.desktop', 'nm-connection-editor.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.Characters.desktop', 'org.gnome.Logs.desktop', 'org.gnome.font-viewer.desktop', 'htop.desktop', 'yelp.desktop', 'lstopo.desktop', 'yad-icon-browser.desktop', 'yad-settings.desktop', 'wihotspot.desktop', 'btop.desktop']
+categories=['X-GNOME-Utilities']
+excluded-apps=['org.gnome.tweaks.desktop', 'safeeyes.desktop', 'shotwell.desktop']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/ce500ff8-31f8-4a29-bfdb-15ab5f0260da]
+apps=['org.gnome.Extensions.desktop', 'org.gnome.Settings.desktop', 'org.gnome.tweaks.desktop', 'com.github.tchx84.Flatseal.desktop']
+name='Quick Settings'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/f1357cf2-efd3-4a8b-b31b-534a3e9b365d]
+apps=['gimp.desktop', 'org.gimp.GIMP.desktop']
+name='Image Editing'
+translate=false

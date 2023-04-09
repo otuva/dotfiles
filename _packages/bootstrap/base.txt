@@ -9,6 +9,8 @@ duf
 ripgrep 
 ttf-terminus-nerd
 oh-my-zsh-git
+xdg-ninja-git
+wayback-spn-script-git
 zsh-syntax-highlighting
 zsh-autosuggestions
 papirus-icon-theme

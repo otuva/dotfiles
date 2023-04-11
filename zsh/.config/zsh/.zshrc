@@ -59,21 +59,21 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export EDITOR='vim'
 export GPG_TTY=$(tty)
 
-alias wget="wget --hsts-file=${XDG_DATA_HOME}/wget-hsts"
-alias docker="sudo docker"
 alias up="yay -Syu"
-alias random-string="openssl rand -base64 16"
 alias ip="ip -c -h -p"
 alias cp="cp -i"                                # confirm before overwriting something
-alias rm="rm -I"			                    # confirm before f-up
+alias rm="rm -I"                                # confirm before f-up
 alias free='free -m'                            # show sizes in mb
 alias gitvisual="git log --graph --decorate --oneline"
+alias random-string="openssl rand -base64 16"
 
-alias cat="bat"
 alias ls="exa"
+alias df="duf"
+alias cat="bat"
 alias grep="rg"
 alias find="fd"
-alias df="duf"
+alias wget="wget --hsts-file=${XDG_DATA_HOME}/wget-hsts"
+alias docker="sudo docker"
 
 # ------------------------------------------------------------
 # -------------------------end-zshrc--------------------------

@@ -1,4 +1,4 @@
 [Context]
 devices=!all;dri
 features=!bluetooth
-filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord;/mnt/84900c3e-2911-43af-800e-80e8c972a78e/games
+filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord;/mnt/cc59c3dd-0815-461c-a481-c9d1b371149b/games

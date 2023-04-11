@@ -91,3 +91,7 @@ font='DejaVuSansMono Nerd Font Mono 16'
 palette=['rgb(36,31,49)', 'rgb(204,0,0)', 'rgb(46,194,126)', 'rgb(245,194,17)', 'rgb(30,120,228)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(245,194,17)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
 use-system-font=false
 use-theme-colors=true
+
+[org/gnome/desktop/media-handling]
+automount=false
+automount-open=false

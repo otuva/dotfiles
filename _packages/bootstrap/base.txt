@@ -7,8 +7,6 @@ bat
 fd 
 duf
 ripgrep
-ttf-dejavu-nerd
-ttf-terminus-nerd
 oh-my-zsh-git
 xdg-ninja-git
 wayback-spn-script-git

@@ -1,0 +1,2 @@
+ttf-dejavu-nerd
+ttf-terminus-nerd

@@ -1,0 +1,4 @@
+[Session Bus Policy]
+com.canonical.indicator.application=none
+com.canonical.AppMenu.Registrar=none
+org.ayatana.indicator.application=none

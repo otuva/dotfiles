@@ -2,4 +2,6 @@
 application/x-code-workspace=com.visualstudio.code.desktop;
 inode/directory=com.visualstudio.code.desktop;
 text/plain=com.visualstudio.code.desktop;
+x-scheme-handler/steam=com.valvesoftware.Steam.desktop;
+x-scheme-handler/steamlink=com.valvesoftware.Steam.desktop;
 x-scheme-handler/vscode=com.visualstudio.code-url-handler.desktop;

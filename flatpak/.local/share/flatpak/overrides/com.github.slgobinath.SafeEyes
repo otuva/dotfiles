@@ -1,5 +1,0 @@
-[System Bus Policy]
-org.freedesktop.DBus=none
-
-[Session Bus Policy]
-org.freedesktop.Notifications=none

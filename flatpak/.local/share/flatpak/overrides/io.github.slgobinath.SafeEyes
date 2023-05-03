@@ -1,3 +1,7 @@
+[Context]
+shared=!network
+filesystems=xdg-config/gtk-3.0:ro
+
 [Session Bus Policy]
 com.canonical.indicator.application=none
 com.canonical.AppMenu.Registrar=none

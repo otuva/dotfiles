@@ -2,7 +2,7 @@
 sockets=!ssh-auth
 devices=!all;kvm;dri
 features=!multiarch
-filesystems=!xdg-run/keyring;!host
+filesystems=!xdg-run/keyring;~/Dev/android;!host
 persistent=.
 
 [Session Bus Policy]

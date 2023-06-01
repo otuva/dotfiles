@@ -1,0 +1,8 @@
+[Context]
+sockets=!ssh-auth
+devices=!all;dri
+filesystems=!xdg-run/keyring;!xdg-run/gnupg;!xdg-run/app/com.discordapp.Discord;~/Dev/kotlin;!host
+persistent=.;.android;.konan;.java;.jdks
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=none

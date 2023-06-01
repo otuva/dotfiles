@@ -1,0 +1,5 @@
+[Context]
+sockets=!ssh-auth;!session-bus;!pulseaudio
+devices=!all;dri
+filesystems=!xdg-run/keyring;~/Dev/python;xdg-config/git:ro;!host
+persistent=.pki;.java;.keras

@@ -1,0 +1,9 @@
+[Context]
+filesystems=!xdg-run/keyring;~/Dev/js;xdg-config/git:ro;!host
+persistent=.npm;.java
+
+[Environment]
+PATH=/app/bin:/usr/bin:/usr/lib/sdk/node18/bin/
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=none

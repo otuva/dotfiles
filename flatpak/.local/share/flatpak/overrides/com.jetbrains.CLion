@@ -1,0 +1,11 @@
+[Context]
+sockets=!ssh-auth
+devices=!all;dri
+filesystems=!xdg-run/keyring;xdg-config/git:ro;~/Dev/cpp;!host
+persistent=.java;.pki
+
+[Environment]
+PATH=/app/bin:/app/extensions/bin:/usr/bin:/usr/lib/sdk/mingw-w64/bin
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=none

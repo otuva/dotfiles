@@ -4,5 +4,9 @@ devices=!all;kvm;dri
 filesystems=!xdg-run/keyring;~/Dev/android;!host
 persistent=.
 
+[Environment]
+PATH=/app/bin:/usr/bin:/home/tfp/Android/Sdk/platform-tools:/home/tfp/Android/Sdk/emulator
+HISTFILE=/home/tfp/.bash_history
+
 [Session Bus Policy]
 org.freedesktop.Flatpak=none

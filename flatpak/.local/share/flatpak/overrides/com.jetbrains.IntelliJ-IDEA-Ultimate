@@ -1,8 +1,12 @@
 [Context]
 sockets=!ssh-auth
 devices=!all;dri
-filesystems=!xdg-run/keyring;!xdg-run/gnupg;!xdg-run/app/com.discordapp.Discord;~/Dev/kotlin;!host
-persistent=.;.android;.konan;.java;.jdks
+filesystems=!xdg-run/keyring;!xdg-run/gnupg;!xdg-run/app/com.discordapp.Discord;~/Dev/js;~/Dev/kotlin;!host
+persistent=.;.jdks;.java;.konan;.android;.m2;.npm;.pki
+
+[Environment]
+JAVA_HOME=/home/tfp/.jdks/openjdk-19.0.2
+PATH=/app/bin:/usr/bin:/usr/lib/sdk/node18/bin/
 
 [Session Bus Policy]
 org.freedesktop.Flatpak=none

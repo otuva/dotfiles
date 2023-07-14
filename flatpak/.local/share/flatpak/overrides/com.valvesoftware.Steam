@@ -1,6 +1,7 @@
 [Context]
 features=!bluetooth
-filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord;/mnt/cc59c3dd-0815-461c-a481-c9d1b371149b/games;/run/media/tfp/TFP/backup/games/steambackup
+filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord;/run/media/tfp/TFP/backup/games/steambackup;/mnt/cc59c3dd-0815-461c-a481-c9d1b371149b/games
 
 [Environment]
 HISTFILE=/home/tfp/.bash_history
+STEAM_FORCE_DESKTOPUI_SCALING=1.25

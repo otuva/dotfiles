@@ -2,11 +2,11 @@
 sockets=!ssh-auth;!pulseaudio;wayland;!x11
 devices=!all;dri
 features=!devel
-filesystems=!xdg-config/kdeglobals;xdg-config/git:ro;~/Dev;!host
-persistent=.npm;.vscode-cli;.apklab;.vscode;.dotnet;.pki
+filesystems=!xdg-config/kdeglobals;!xdg-config/gtk-3.0;~/Dev;!host
+persistent=.
 
 [Environment]
-PATH=/app/bin:/usr/bin:/usr/lib/sdk/node18/bin/:/usr/lib/sdk/openjdk/bin
+PATH=/app/bin:/usr/bin:/usr/lib/sdk/node18/bin/:/usr/lib/sdk/openjdk/bin:/home/tfp/.local/bin
 
 [System Bus Policy]
 org.freedesktop.login1=none

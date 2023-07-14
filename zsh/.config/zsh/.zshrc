@@ -59,7 +59,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export EDITOR='vim'
 export GPG_TTY=$(tty)
 
-alias up="yay -Syu"
 alias ip="ip -c -h -p"
 alias cp="cp -i"                                # confirm before overwriting something
 alias rm="rm -I"                                # confirm before f-up

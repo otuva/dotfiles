@@ -1,6 +1,5 @@
 [Context]
-shared=!network
-filesystems=xdg-config/gtk-3.0:ro
+filesystems=!xdg-config/gtk-3.0
 
 [Session Bus Policy]
 com.canonical.indicator.application=none

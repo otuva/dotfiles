@@ -1,5 +1,5 @@
 [Context]
 shared=!network
 sockets=!pulseaudio
-filesystems=!home
+filesystems=~/Dev/ghidra;!home
 persistent=.

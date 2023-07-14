@@ -1,11 +1,11 @@
 [Context]
 sockets=!ssh-auth
 devices=!all;kvm;dri
-filesystems=!xdg-run/keyring;~/Dev/android;!host
+filesystems=!xdg-run/keyring;~/Dev/flutter;~/Dev/android;!host
 persistent=.
 
 [Environment]
-PATH=/app/bin:/usr/bin:/home/tfp/Android/Sdk/platform-tools:/home/tfp/Android/Sdk/emulator
+PATH=/app/bin:/usr/bin:/home/tfp/Android/Sdk/platform-tools:/home/tfp/Android/Sdk/emulator:/home/tfp/flutter/bin
 HISTFILE=/home/tfp/.bash_history
 
 [Session Bus Policy]

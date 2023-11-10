@@ -1,0 +1,11 @@
+[Context]
+shared=!network
+sockets=wayland;!x11
+filesystems=!xdg-config/kdeglobals;!host
+persistent=OpenShot
+
+[Session Bus Policy]
+com.canonical.AppMenu.Registrar=none
+org.kde.kconfig.notify=none
+org.kde.KGlobalSettings=none
+org.freedesktop.Flatpak=none

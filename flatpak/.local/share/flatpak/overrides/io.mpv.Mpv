@@ -1,0 +1,4 @@
+[Context]
+sockets=!x11
+devices=!all
+filesystems=!~/.var/app/io.mpv.Mpv/config/mpv/scripts;!xdg-videos;!/tmp;!xdg-pictures;!xdg-run/pipewire-0;/home/tfp/Downloads/Torrents:ro;/home/tfp/.var/app/org.qbittorrent.qBittorrent/Downloads:ro;!host

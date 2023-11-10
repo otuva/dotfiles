@@ -1,0 +1,4 @@
+[Context]
+sockets=!x11
+devices=!all
+filesystems=!xdg-config/kdeglobals;!xdg-run/app/com.discordapp.Discord

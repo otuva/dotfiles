@@ -2,5 +2,8 @@
 sockets=!fallback-x11;!x11
 filesystems=!xdg-config/kdeglobals
 
+[Environment]
+QT_SCALE_FACTOR=1.25
+
 [Session Bus Policy]
 org.kde.*=none

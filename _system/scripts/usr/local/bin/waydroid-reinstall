@@ -1,8 +1,0 @@
-#!/bin/bash
-
-waydroid session stop
-yay -Rnsc waydroid
-sudo rm -rf /var/lib/waydroid ~/.local/share/waydroid /usr/share/waydroid-extra
-yay -S waydroid
-sudo waydroid init -f
-sudo systemctl enable waydroid-container.service

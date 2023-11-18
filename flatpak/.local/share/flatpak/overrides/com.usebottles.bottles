@@ -1,0 +1,7 @@
+[Context]
+sockets=!x11
+devices=!all;dri
+filesystems=!xdg-download
+
+[System Bus Policy]
+org.freedesktop.UDisks2=none

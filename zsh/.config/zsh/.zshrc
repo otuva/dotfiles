@@ -25,11 +25,6 @@ plugins=(git) # Standard plugins can be found in $ZSH/plugins/
 # -------------------------functions--------------------------
 # ------------------------------------------------------------
 
-autoremove() 
-{
-    yay -R $(yay -Qdtq)
-}
-
 wayback()
 {
     spn -a "$(secret-tool lookup wayback accesskey):$(secret-tool lookup wayback secretkey)" "$1"

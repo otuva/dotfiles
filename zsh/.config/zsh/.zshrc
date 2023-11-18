@@ -11,7 +11,7 @@
 # -------------------------oh-my-zsh--------------------------
 # ------------------------------------------------------------
 
-ZSH=/usr/share/oh-my-zsh # Path to your oh-my-zsh installation.
+ZSH=$ZDOTDIR/ohmyzsh # Path to your oh-my-zsh installation.
 
 ZSH_THEME="agnoster" # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
@@ -66,7 +66,7 @@ alias free='free -m'                            # show sizes in mb
 alias gitvisual="git log --graph --decorate --oneline"
 alias random-string="openssl rand -base64 16"
 
-alias ls="exa"
+alias ls="eza"
 alias df="duf"
 alias cat="bat"
 alias grep="rg"

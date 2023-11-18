@@ -31,12 +31,16 @@ wayback()
 }
 
 # ------------------------------------------------------------
-# ---------------------------cache----------------------------
+# ---------------------------check----------------------------
 # ------------------------------------------------------------
 
 ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
-if [[ ! -d "$ZSH_CACHE_DIR" ]]; then
+if [[ ! -d "$ZSH_CACHE_DIR" ]]; then # create cache dir
   mkdir "$ZSH_CACHE_DIR"
+fi
+
+if [[ -d "$HOME/.local/bin" ]]; then # add local bin to path
+  PATH="$HOME/.local/bin:$PATH"
 fi
 
 # ------------------------------------------------------------

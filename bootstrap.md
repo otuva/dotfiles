@@ -17,6 +17,7 @@
 - [Flatpak app configs](#flatpak-app-configs)
   * [Ungoogled Chromium](#ungoogled-chromium)
   * [Generic Electron Apps](#generic-electron-apps)
+  * [VS Code git](#vs-code-git)
 - [Gnome](#gnome)
   * [Weather app top bar set centigrade](#weather-app-top-bar-set-centigrade)
   * [Sort apps alphabetically](#sort-apps-alphabetically)
@@ -140,6 +141,19 @@ kernel.sysrq = 1
 ```
 --enable-features=WaylandWindowDecorations
 --ozone-platform-hint=wayland
+```
+
+#### VS Code git
+
+*~/.var/app/com.visualstudio.code/config/git/config*
+
+[Copy this](git/.config/git/config)
+
+and add 
+
+```
+[diff]
+  ignoreSubmodules = dirty
 ```
 
 ### Gnome

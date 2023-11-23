@@ -2,7 +2,7 @@
 sockets=!ssh-auth;!pulseaudio;wayland;!x11
 devices=!all;dri
 features=!devel
-filesystems=!xdg-config/kdeglobals;!xdg-config/gtk-3.0;/var/home/tfp/.config/dotfiles;!host
+filesystems=!xdg-config/kdeglobals;!xdg-config/gtk-3.0;!host
 persistent=.
 
 [Environment]

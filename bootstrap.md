@@ -149,13 +149,6 @@ kernel.sysrq = 1
 
 [Copy this](git/.config/git/config)
 
-and add 
-
-```
-[diff]
-  ignoreSubmodules = dirty
-```
-
 ### Gnome
 
 #### Weather app top bar set centigrade

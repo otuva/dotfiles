@@ -4,3 +4,5 @@
 	signingkey = 163CC67E12FE2CD76678AF3AE04DE6974DCD4B3B
 [commit]
 	gpgsign = false
+[diff]
+	ignoreSubmodules = dirty

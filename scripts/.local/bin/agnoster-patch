@@ -1,0 +1,35 @@
+#!/usr/bin/python
+
+import re
+import os
+
+z_f = os.path.expandvars('$ZDOTDIR/ohmyzsh/themes/agnoster.zsh-theme')
+
+# Open the file in read mode
+with open(z_f, 'r') as f:
+    # Read the file contents
+    file_contents = f.read()
+
+# Define the pattern to search for
+pattern = r"""#\sEnd\sthe\sprompt,\sclosing\sany\sopen\ssegments\nprompt_end\(\)\s\{\n\s\sif\s\[\[\s-n\s\$CURRENT_BG\s\]\];\sthen\n\s\s\s\secho\s-n\s"\s%\{%k%F\{\$CURRENT_BG\}%\}\$SEGMENT_SEPARATOR"\n\s\selse\n\s\s\s\secho\s-n\s"%\{%k%\}"\n\s\sfi\n\s\secho\s-n\s"%\{%f%\}"\n\s\sCURRENT_BG=''\n\}"""
+
+# Define the replacement text
+replacement = """# End the prompt, closing any open segments
+prompt_end() {
+  if [[ -n $CURRENT_BG ]]; then
+    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+  else
+    echo -n "%{%k%}"
+  fi
+  echo -n "%{%f%}"
+  printf "\\\\n ➜"
+  CURRENT_BG=''
+}"""
+
+# Replace the pattern with the replacement text
+new_file_contents = re.sub(pattern, replacement, file_contents)
+
+# Open the file in write mode
+with open(z_f, 'w') as f:
+    # Write the new file contents to the file
+    f.write(new_file_contents)

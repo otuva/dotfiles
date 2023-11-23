@@ -72,7 +72,7 @@ export KERAS_HOME="${XDG_STATE_HOME}/keras"
 #### Python history xdg 
 
 */etc/python/pythonrc*
-```
+```python
 import os
 import atexit
 import readline
@@ -171,10 +171,10 @@ gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 
 #### Extensions
 
-- background-logo@fedorahosted.org
-- dash-to-dock@micxgx.gmail.com
-- appindicatorsupport@rgcjonas.gmail.com
+- background-logo@fedorahosted[.]org
+- dash-to-dock@micxgx[.]gmail[.]com
+- appindicatorsupport@rgcjonas[.]gmail[.]com
 - just-perfection-desktop@just-perfection
-- pano@elhan.io
-- caffeine@patapon.info
-- gsconnect@andyholmes.github.io
+- pano@elhan[.]io
+- caffeine@patapon[.]info
+- gsconnect@andyholmes[.]github[.]io

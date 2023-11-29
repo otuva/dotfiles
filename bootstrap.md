@@ -23,6 +23,9 @@
   * [Sort apps alphabetically](#sort-apps-alphabetically)
   * [Legacy apps dark mode](#legacy-apps-dark-mode)
   * [Extensions](#extensions)
+- [Fedora Silverblue](#fedora-silverblue)
+  * [Packages](#packages)
+  * [Flatpaks](#flatpaks)
 
 ---
 
@@ -178,3 +181,14 @@ gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 - pano@elhan[.]io
 - caffeine@patapon[.]info
 - gsconnect@andyholmes[.]github[.]io
+
+### Fedora Silverblue
+
+#### Packages
+
+- **RemovedBasePackages:** firefox firefox-langpacks 120.0-3.fc39 gnome-tour 45.0-1.fc39 yelp 2:42.2-4.fc39
+- **LayeredPackages:** akmod-nvidia bat duf eza fd-find gnome-themes-extra gnome-tweaks kernel-tools libgda libgda-sqlite lm_sensors nautilus-python neofetch numix-icon-theme-circle ripgrep stow virt-manager xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda zsh zsh-autosuggestions zsh-syntax-highlighting
+
+#### Flatpaks
+
+- **Installed:** com.github.Eloston.UngoogledChromium com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager com.usebottles.bottles com.valvesoftware.Steam com.visualstudio.code io.github.slgobinath.SafeEyes io.gitlab.librewolf-community io.mpv.Mpv org.gnome.Calculator org.gnome.Calendar org.gnome.Cheese org.gnome.Connections org.gnome.Evince org.gnome.Extensions org.gnome.Logs org.gnome.Loupe org.gnome.NautilusPreviewer org.gnome.SoundRecorder org.gnome.TextEditor org.gnome.Weather org.gnome.baobab org.gnome.clocks org.gnome.font-viewer org.libreoffice.LibreOffice org.mozilla.Thunderbird org.nickvision.tubeconverter org.qbittorrent.qBittorrent org.telegram.desktop

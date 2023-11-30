@@ -5,11 +5,9 @@ features=!devel
 filesystems=!xdg-config/kdeglobals;!xdg-config/gtk-3.0;!host
 persistent=.
 
-[Environment]
-PATH=/app/bin:/usr/bin:/usr/lib/sdk/node18/bin/:/usr/lib/sdk/openjdk/bin:/home/tfp/.local/bin
-
 [System Bus Policy]
 org.freedesktop.login1=none
 
 [Session Bus Policy]
 org.freedesktop.Flatpak=none
+com.canonical.AppMenu.Registrar.*=none

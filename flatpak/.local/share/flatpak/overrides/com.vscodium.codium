@@ -1,0 +1,16 @@
+[Context]
+sockets=!ssh-auth;!pulseaudio;!x11
+devices=!all;dri
+features=!devel
+filesystems=!xdg-config/kdeglobals;!xdg-run/gnupg;!xdg-config/gtk-4.0;!xdg-config/gtk-3.0;!host
+persistent=.
+
+[Environment]
+XCURSOR_PATH=
+
+[System Bus Policy]
+org.freedesktop.login1=none
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=none
+org.freedesktop.secrets=none

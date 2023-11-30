@@ -13,3 +13,8 @@ stow -t ~ git vim zsh # ...
 For quick start after a clean install:
 
 [Configurations](bootstrap.md)
+
+## TODO
+
+- Perhaps automate bootstrap.md with ansible? or a python script. Using yaml either way
+- Sync yaml packages file with new changes. For both flatpak and rpm

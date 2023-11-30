@@ -55,7 +55,7 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # -----------------------export-&-alias-----------------------
 # ------------------------------------------------------------
 
-export EDITOR='vim'
+export EDITOR='/usr/bin/nano'
 export GPG_TTY=$(tty)
 
 alias ip="ip -c -h -p"

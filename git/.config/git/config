@@ -1,8 +1,8 @@
 [user]
 	email = onur.alp.akin@proton.me
-	name = Onur Alp AKIN
-	signingkey = 163CC67E12FE2CD76678AF3AE04DE6974DCD4B3B
+	name = ONUR ALP AKIN
+	signingkey = E7C1871685632A413BFD93804BE763345987F62C
 [commit]
-	gpgsign = false
+	gpgsign = true
 [diff]
 	ignoreSubmodules = dirty

@@ -1,7 +1,5 @@
 [Context]
-devices=!all;dri
 filesystems=!~/.steam;!xdg-run/app/com.discordapp.Discord;!xdg-desktop;!~/Games/Heroic;!xdg-data/lutris;!xdg-documents;!xdg-data/applications;!/run/media;!/run/udev;!~/.var/app/com.valvesoftware.Steam;!/mnt;!xdg-data/Steam;/mnt/ed08a9de-49ce-437a-aa99-e863c78742b4/games/heroic
-persistent=Games;.pki
 
 [Session Bus Policy]
 org.kde.*=none

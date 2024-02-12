@@ -1,5 +1,5 @@
 [Context]
 sockets=!fallback-x11;!x11
-devices=dri
+devices=!all;dri
 filesystems=!xdg-run/pipewire-0
 persistent=Downloads

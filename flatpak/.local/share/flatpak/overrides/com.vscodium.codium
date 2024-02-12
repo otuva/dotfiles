@@ -2,7 +2,7 @@
 sockets=!ssh-auth;!pulseaudio;!x11
 devices=!all;dri
 features=!devel
-filesystems=!xdg-config/kdeglobals;!xdg-run/gnupg;!xdg-config/gtk-4.0;!xdg-config/gtk-3.0;!host
+filesystems=!xdg-config/kdeglobals;!xdg-run/gnupg;!host
 persistent=.
 
 [Environment]

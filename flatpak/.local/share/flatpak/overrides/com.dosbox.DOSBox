@@ -1,0 +1,5 @@
+[Context]
+shared=!network
+devices=!all
+filesystems=!xdg-documents
+persistent=dosbox

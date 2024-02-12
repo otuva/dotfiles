@@ -1,0 +1,4 @@
+[Context]
+sockets=!x11
+filesystems=!xdg-config/gtk-3.0;!host
+persistent=Pictures

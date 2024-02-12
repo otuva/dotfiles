@@ -177,13 +177,7 @@ gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 #### Extensions
 
 - `gsettings get org.gnome.shell enabled-extensions`
-- background-logo@fedorahosted[.]org
-- dash-to-dock@micxgx[.]gmail[.]com
-- appindicatorsupport@rgcjonas[.]gmail[.]com
-- just-perfection-desktop@just-perfection
 - pano@elhan[.]io
-- caffeine@patapon[.]info
-- gsconnect@andyholmes[.]github[.]io
 
 ### Fedora Silverblue
 

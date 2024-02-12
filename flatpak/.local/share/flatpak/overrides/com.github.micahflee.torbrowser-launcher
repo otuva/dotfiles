@@ -1,4 +1,4 @@
 [Context]
 sockets=!pulseaudio;!fallback-x11;!x11
-filesystems=!xdg-config/kdeglobals;!xdg-download
+filesystems=!xdg-download
 persistent=Downloads

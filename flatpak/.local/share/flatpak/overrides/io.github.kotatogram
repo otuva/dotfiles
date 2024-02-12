@@ -1,0 +1,4 @@
+[Context]
+sockets=!x11
+filesystems=!xdg-run/pipewire-0;!xdg-download;!host
+persistent=Downloads

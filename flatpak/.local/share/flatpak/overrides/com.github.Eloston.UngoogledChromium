@@ -1,5 +1,4 @@
 [Context]
 sockets=!cups;!pcsc;!x11
-devices=!all;dri
 filesystems=!/run/.heim_org.h5l.kcm-socket;!home
 persistent=Downloads

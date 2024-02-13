@@ -2,6 +2,7 @@
 
 import yaml
 import subprocess
+import argparse
 
 # ------------------------------
 # ----------dot-access----------
@@ -47,15 +48,40 @@ class edict(dict):
     def _is_indexable(obj):
         return isinstance(obj, (tuple, list, set, frozenset))
 
+# ------------------------------------------
+# --------------argument-parse--------------
+# ------------------------------------------
+parser = argparse.ArgumentParser(description='Configure the system')
+parser.add_argument("--show",
+                    help="Show what can you execute",
+                    metavar="",
+                    action=argparse.BooleanOptionalAction,
+                    type=bool)
+parser.add_argument("--command",
+                    help="Command to execute from list",
+                    type=str)
+
 # ---------------------------------------
 # -------------actual-script-------------
 # ---------------------------------------
+# def show_commands(bst):
+
+
 def run_command(command):
-    return subprocess.run(command.split(), stdout=subprocess.PIPE)
+    sp = subprocess.run(command.split(), stdout=subprocess.PIPE)
+    print(sp.stdout)
 
 def main(bst):
-    myvar = run_command(bst.commands.list_packages.flatpak)
-    print(myvar.stdout)
+    args = parser.parse_args()
+
+    if (args.show):
+        print('showing arguments')
+    elif (args.command):
+        print("executing command", args.command)
+    else:
+        parser.print_help()
+
+    # run_command(bst.commands.list_packages.flatpak)
 
 # ------------------------------------------
 # --------------load-yaml-file--------------

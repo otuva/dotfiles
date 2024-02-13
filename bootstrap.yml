@@ -67,14 +67,17 @@
 
 # alias dnf="sudo dnf"' | sudo tee -a /etc/profile
 
+command:
+  package:
+    rpm_ostree:
+      remove: "rpm-ostree override remove"
+      install: "rpm-ostree install"
 
 action:
   package:
     rpm_ostree:
       remove:
         - "firefox firefox-langpacks gnome-tour yelp"
+      install:
+        - "neofetch"
 
-command:
-  package:
-    rpm_ostree:
-      remove: "rpm-ostree override remove"

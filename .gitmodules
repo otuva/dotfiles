@@ -7,3 +7,9 @@
 [submodule "scripts/.local/bin/xdg-ninja-git"]
 	path = scripts/.local/bin/xdg-ninja-git
 	url = https://github.com/b3nj5m1n/xdg-ninja
+[submodule "zsh/.config/zsh/ext/zsh-autosuggestions"]
+	path = zsh/.config/zsh/ext/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/.config/zsh/ext/zsh-syntax-highlighting"]
+	path = zsh/.config/zsh/ext/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting

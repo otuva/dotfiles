@@ -11,7 +11,7 @@
 # -------------------------oh-my-zsh--------------------------
 # ------------------------------------------------------------
 
-ZSH=$ZDOTDIR/ohmyzsh # Path to your oh-my-zsh installation.
+OHMYZSH=$ZDOTDIR/ohmyzsh # Path to your oh-my-zsh installation.
 
 ZSH_THEME="agnoster" # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
@@ -47,9 +47,9 @@ fi
 # ---------------------------source---------------------------
 # ------------------------------------------------------------
 
-source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $OHMYZSH/oh-my-zsh.sh
+source $ZDOTDIR/ext/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZDOTDIR/ext/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ------------------------------------------------------------
 # -----------------------export-&-alias-----------------------

@@ -72,10 +72,7 @@ action:
   package:
     rpm_ostree:
       remove:
-        - firefox
-        - firefox-langpacks
-        - gnome-tour
-        - yelp
+        - "firefox firefox-langpacks gnome-tour yelp"
 
 command:
   package:

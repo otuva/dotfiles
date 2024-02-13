@@ -1,5 +1,5 @@
-[submodule "scripts/.local/bin/wayback"]
-	path = scripts/.local/bin/wayback
+[submodule "scripts/.local/bin/wayback-git"]
+	path = scripts/.local/bin/wayback-git
 	url = https://github.com/overcast07/wayback-machine-spn-scripts
 [submodule "zsh/.config/zsh/ohmyzsh"]
 	path = zsh/.config/zsh/ohmyzsh

@@ -40,7 +40,9 @@ def get_dict_key(dictionary, keys):
         return dictionary[keys]
 
 def run_command(command):
-    sp = subprocess.run(command.split(), stdout=subprocess.PIPE)
+    splt = command.split()
+    sp = subprocess.run(splt, stdout=subprocess.PIPE)
+    print(f"Executing: {splt}")
     if (sp.stdout):
         print(sp.stdout)
 

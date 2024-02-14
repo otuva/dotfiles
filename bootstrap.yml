@@ -68,16 +68,42 @@
 # alias dnf="sudo dnf"' | sudo tee -a /etc/profile
 
 command:
-  package:
-    rpm_ostree:
-      remove: "rpm-ostree override remove"
-      install: "rpm-ostree install"
+  gnome:
+    base: "gsettings set"
+  rpm_ostree:
+    remove: "rpm-ostree override remove"
+    install: "rpm-ostree install"
+  flatpak:
+    install: "flatpak install flathub --assumeyes"
 
 action:
-  package:
-    rpm_ostree:
-      remove:
-        - "firefox firefox-langpacks gnome-tour yelp"
-      install:
-        - "neofetch"
+  gnome:
+    base:
+      - "org.gnome.GWeather4 temperature-unit 'centigrade'" # Weather app top bar set centigrade
+      - "org.gnome.shell app-picker-layout []" # Sort apps alphabetically
+      - "org.gnome.desktop.interface gtk-theme Adwaita-dark" # Legacy apps dark mode
+  rpm_ostree:
+    remove:
+      - "firefox firefox-langpacks gnome-tour yelp"
+    install:
+      - "neofetch"
+  flatpak:
+    install:
+      - com.github.jeromerobert.pdfarranger
+      - com.github.johnfactotum.Foliate
+      - com.github.tchx84.Flatseal
+      - com.mattjakeman.ExtensionManager
+      - com.vscodium.codium
+      - io.github.slgobinath.SafeEyes
+      - io.gitlab.librewolf-community
+      - io.mpv.Mpv
+      - org.chromium.Chromium
+      - org.gimp.GIMP
+      - org.inkscape.Inkscape
+      - org.libreoffice.LibreOffice
+      - org.mozilla.Thunderbird
+      - org.nickvision.tubeconverter
+      - org.qbittorrent.qBittorrent
+      - org.telegram.desktop
+      - org.torproject.torbrowser-launcher
 

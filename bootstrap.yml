@@ -75,6 +75,13 @@ command:
     install: "rpm-ostree install"
   flatpak:
     install: "flatpak install flathub --assumeyes"
+    config: "cp"
+  directory:
+    pcreate: "sudo mkdir -p"
+    create: "mkdir -p"
+    remove: "rm -rf" # scary :P
+  system:
+    config: "sudo cp"
 
 action:
   gnome:
@@ -106,4 +113,28 @@ action:
       - org.qbittorrent.qBittorrent
       - org.telegram.desktop
       - org.torproject.torbrowser-launcher
+    config:
+      - "_/flatpak/chromium-flags.conf $HOME/.var/app/com.github.Eloston.UngoogledChromium/config/chromium-flags.conf"
+  directory:
+    pcreate:
+      - "/etc/python"
+    create:
+      - "$HOME/.local/state/zsh"
+    remove:
+      - "$HOME/.local/share/applications"
+      - "$HOME/.local/share/flatpak/overrides"
+      - "$HOME/.config/git"
+      - "$HOME/.config/mpv"
+      - "$HOME/.config/npm"
+      - "$HOME/.local/bin"
+      - "$HOME/.config/vim"
+      - "$HOME/.config/zsh"
+  system:
+    config: 
+      - "_/zprofile /etc/zprofile"
+      - "_/pythonrc /etc/python/pythonrc"
+      - "_/zram-generator.conf /etc/systemd/zram-generator.conf"
+      - "_/90-sysrq.conf /etc/sysctl.d/90-sysrq.conf"
+
+
 

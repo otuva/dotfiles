@@ -41,7 +41,7 @@ def get_dict_key(dictionary, keys):
 
 def run_command(command):
     splt = command.split()
-    sp = subprocess.run(splt, stdout=subprocess.PIPE)
+    sp = subprocess.run(splt, stdout=subprocess.PIPE, shell=True)
     print(f"Executing: {splt}")
     if (sp.stdout):
         print(sp.stdout)

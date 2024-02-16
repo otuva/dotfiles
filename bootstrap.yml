@@ -77,12 +77,13 @@ command:
     install: "flatpak install flathub --assumeyes"
     config: "cp"
   directory:
-    pcreate: "sudo mkdir -p"
     create: "mkdir -p"
     remove: "rm -rf" # scary :P
   system:
     config: "sudo cp"
     stow: "stow -t ~"
+  toolbox:
+    profile: "sudo echo"
 
 action:
   gnome:
@@ -117,8 +118,6 @@ action:
     config:
       - "_/flatpak/chromium-flags.conf $HOME/.var/app/com.github.Eloston.UngoogledChromium/config/chromium-flags.conf"
   directory:
-    pcreate:
-      - "/etc/python"
     create:
       - "$HOME/.local/state/zsh"
       - "$HOME/.var/app/com.github.Eloston.UngoogledChromium/config"
@@ -134,7 +133,7 @@ action:
   system:
     config: 
       - "_/zprofile /etc/zprofile"
-      - "_/pythonrc /etc/python/pythonrc"
+      - "_/pythonrc /etc/pythonrc"
       - "_/zram-generator.conf /etc/systemd/zram-generator.conf"
       - "_/90-sysrq.conf /etc/sysctl.d/90-sysrq.conf"
     stow:
@@ -146,3 +145,7 @@ action:
       - "scripts"
       - "vim"
       - "zsh"
+  toolbox:
+    profile:
+      - "'export HISTFILE=\"${XDG_STATE_HOME}\"/bash/history' >> /etc/profile"
+      - "'alias dnf=\"sudo dnf\"' >> /etc/profile"

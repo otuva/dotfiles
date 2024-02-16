@@ -121,6 +121,7 @@ action:
       - "/etc/python"
     create:
       - "$HOME/.local/state/zsh"
+      - "$HOME/.var/app/com.github.Eloston.UngoogledChromium/config"
     remove:
       - "$HOME/.local/share/applications"
       - "$HOME/.local/share/flatpak/overrides"

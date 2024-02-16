@@ -82,6 +82,7 @@ command:
     remove: "rm -rf" # scary :P
   system:
     config: "sudo cp"
+    stow: "stow -t ~"
 
 action:
   gnome:
@@ -135,6 +136,12 @@ action:
       - "_/pythonrc /etc/python/pythonrc"
       - "_/zram-generator.conf /etc/systemd/zram-generator.conf"
       - "_/90-sysrq.conf /etc/sysctl.d/90-sysrq.conf"
-
-
-
+    stow:
+      - "applications"
+      - "flatpak"
+      - "git"
+      - "mpv"
+      - "npm"
+      - "scripts"
+      - "vim"
+      - "zsh"

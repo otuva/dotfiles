@@ -3,6 +3,6 @@
 	name = ONUR ALP AKIN
 	signingkey = E7C1871685632A413BFD93804BE763345987F62C
 [commit]
-	gpgsign = true
+	gpgsign = false
 [diff]
 	ignoreSubmodules = dirty

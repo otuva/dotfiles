@@ -65,13 +65,13 @@ alias free='free -m'                            # show sizes in mb
 alias gitvisual="git log --graph --decorate --oneline"
 alias random-string="openssl rand -base64 16"
 
-alias ls="eza"
-alias df="duf"
-alias cat="bat"
-alias grep="rg"
-alias find="fd"
 alias wget="wget --hsts-file=${XDG_DATA_HOME}/wget-hsts"
-alias docker="sudo docker"
+# alias ls="eza"
+# alias df="duf"
+# alias cat="bat"
+# alias grep="rg"
+# alias find="fd"
+# alias docker="sudo docker"
 
 # ------------------------------------------------------------
 # -------------------------end-zshrc--------------------------

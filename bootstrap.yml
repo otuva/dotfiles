@@ -1,4 +1,7 @@
 command:
+  all: 
+    base: "./configure --command"
+    toolbox: "./configure --command"
   gnome:
     base: "gsettings set"
     extension: "gnome-extensions enable"
@@ -10,16 +13,32 @@ command:
     install: "flatpak install flathub --assumeyes"
     config: "cp"
   directory:
-    create: "mkdir -p"
-    remove: "rm -rf" # scary :P
+    create: "mkdir -p" # create directories required by things
+    remove: "rm -rf" # scary :P / remove before stow
   system:
-    config: "sudo cp"
+    config: "sudo cp" # copy files to various places
     stow: "stow -t ~"
   toolbox:
     required: "sudo dnf install --assumeyes"
     profile: "echo"
 
 action:
+  all:
+    base:
+      - "directory.create"
+      - "directory.remove"
+      - "rpm_ostree.remove"
+      - "rpm_ostree.install"
+      - "flatpak.install"
+      - "flatpak.config"
+      - "system.config"
+      - "gnome.base"
+      - "gnome.favs"
+      - "gnome.extension"
+    toolbox:
+      - "toolbox.profile"
+      - "toolbox.required"
+      - "system.stow"
   gnome:
     base:
       - "org.gnome.GWeather4 temperature-unit 'centigrade'" # Weather app top bar set centigrade

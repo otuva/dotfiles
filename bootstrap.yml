@@ -14,6 +14,7 @@ command:
     config: "sudo cp"
     stow: "stow -t ~"
   toolbox:
+    required: "sudo dnf install"
     profile: "echo"
 
 action:
@@ -78,6 +79,9 @@ action:
       - "vim"
       - "zsh"
   toolbox:
+    required:
+      - "stow"
+      - "python3-pyyaml"
     profile:
       - "'export XDG_DATA_HOME=\"${HOME}/.local/share\"' | sudo tee -a /etc/profile"
       - "'export XDG_CONFIG_HOME=\"${HOME}/.config\"' | sudo tee -a /etc/profile"

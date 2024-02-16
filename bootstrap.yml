@@ -79,5 +79,9 @@ action:
       - "zsh"
   toolbox:
     profile:
+      - "'export XDG_DATA_HOME=\"${HOME}/.local/share\"' | sudo tee -a /etc/profile"
+      - "'export XDG_CONFIG_HOME=\"${HOME}/.config\"' | sudo tee -a /etc/profile"
+      - "'export XDG_STATE_HOME=\"${HOME}/.local/state\"' | sudo tee -a /etc/profile"
+      - "'export XDG_CACHE_HOME=\"${HOME}/.cache\"' | sudo tee -a /etc/profile"
       - "'export HISTFILE=\"${XDG_STATE_HOME}\"/bash/history' | sudo tee -a /etc/profile"
       - "'alias dnf=\"sudo dnf\"' | sudo tee -a /etc/profile"

@@ -86,7 +86,7 @@ action:
     remove:
       - "firefox firefox-langpacks gnome-tour yelp"
     install:
-      - "neofetch"
+      - "gnome-themes-extra gnome-tweaks kernel-tools libgda libgda-sqlite nautilus-python neofetch numix-icon-theme-circle virt-manager zsh"
   flatpak:
     install:
       - com.github.jeromerobert.pdfarranger

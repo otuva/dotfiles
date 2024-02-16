@@ -1,7 +1,7 @@
 command:
   gnome:
     base: "gsettings set"
-    extension: "gnome-shell-extension-tool -e"
+    extension: "gnome-extensions enable"
     favs: "gsettings set org.gnome.shell favorite-apps"
   rpm_ostree:
     remove: "rpm-ostree override remove"

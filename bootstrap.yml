@@ -14,7 +14,7 @@ command:
     config: "sudo cp"
     stow: "stow -t ~"
   toolbox:
-    required: "sudo dnf install"
+    required: "sudo dnf install --assumeyes"
     profile: "echo"
 
 action:

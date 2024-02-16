@@ -17,6 +17,7 @@ command:
   system:
     config: "sudo cp" # copy files to various places
     stow: "stow -t ~"
+    virt: "sudo systemctl enable --now"
   toolbox:
     required: "sudo dnf install --assumeyes"
     profile: "echo"
@@ -118,6 +119,8 @@ action:
       - "scripts"
       - "vim"
       - "zsh"
+    virt:
+      - "virtnetworkd"
   toolbox:
     required:
       - "stow"

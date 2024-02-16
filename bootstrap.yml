@@ -83,7 +83,7 @@ command:
     config: "sudo cp"
     stow: "stow -t ~"
   toolbox:
-    profile: "sudo echo"
+    profile: "echo"
 
 action:
   gnome:
@@ -147,5 +147,5 @@ action:
       - "zsh"
   toolbox:
     profile:
-      - "'export HISTFILE=\"${XDG_STATE_HOME}\"/bash/history' >> /etc/profile"
-      - "'alias dnf=\"sudo dnf\"' >> /etc/profile"
+      - "'export HISTFILE=\"${XDG_STATE_HOME}\"/bash/history' | sudo tee -a /etc/profile"
+      - "'alias dnf=\"sudo dnf\"' | sudo tee -a /etc/profile"

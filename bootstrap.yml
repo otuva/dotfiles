@@ -1,72 +1,3 @@
-# packages:
-#   rpm-ostree:
-#     remove:
-#       - firefox
-#       - firefox-langpacks
-#       - gnome-tour
-#       - yelp
-#     install:
-#       qol:
-#         - bat
-#         - duf
-#         - eza
-#         - fd-find
-#         - ripgrep
-#         - stow
-#         - neofetch
-#         - vim
-#       gnome:
-#         - gnome-themes-extra
-#         - gnome-tweaks
-#         - numix-icon-theme-circle # main icon theme
-#       gnome-extensions:
-#         - gnome-shell-extension-appindicator
-#         - gnome-shell-extension-caffeine
-#         - gnome-shell-extension-dash-to-dock
-#         - gnome-shell-extension-gsconnect
-#         - gnome-shell-extension-just-perfection
-#       zsh:
-#         - zsh
-#         - zsh-autosuggestions
-#         - zsh-syntax-highlighting
-#       system:
-#         - virt-manager
-#         - kernel-tools # cpupower
-#         - lm_sensors # 'sensors' command
-#       dependency:
-#         - nautilus-python # gsconnect
-#         - libgda # pano
-#         - libgda-sqlite # pano
-#   flatpak:
-#     - com.github.Eloston.UngoogledChromium
-#     - com.github.jeromerobert.pdfarranger
-#     - com.github.johnfactotum.Foliate
-#     - com.github.micahflee.torbrowser-launcher
-#     - com.github.tchx84.Flatseal
-#     - com.mattjakeman.ExtensionManager
-#     - com.vscodium.codium
-#     - io.github.kotatogram
-#     - io.github.slgobinath.SafeEyes
-#     - io.gitlab.librewolf-community
-#     - io.mpv.Mpv
-#     - org.libreoffice.LibreOffice
-#     - org.mozilla.Thunderbird
-#     - org.nickvision.tubeconverter
-#     - org.qbittorrent.qBittorrent
-# commands:
-#   list_packages:
-#     rpm-ostree: "rpm-ostree status --json"
-#     flatpak: "flatpak list --app --columns application"
-#   edit_env:
-#     toolbox_profile: > echo 'export XDG_DATA_HOME="${HOME}/.local/share"
-# export XDG_CONFIG_HOME="${HOME}/.config"
-# export XDG_STATE_HOME="${HOME}/.local/state"
-# export XDG_CACHE_HOME="${HOME}/.cache"
-
-# export HISTFILE="$XDG_STATE_HOME"/bash/history
-
-# alias dnf="sudo dnf"' | sudo tee -a /etc/profile
-
 command:
   gnome:
     base: "gsettings set"
@@ -120,6 +51,7 @@ action:
   directory:
     create:
       - "$HOME/.local/state/zsh"
+      - "$HOME/.local/state/bash"
       - "$HOME/.var/app/com.github.Eloston.UngoogledChromium/config"
     remove:
       - "$HOME/.local/share/applications"

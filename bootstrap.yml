@@ -1,6 +1,7 @@
 command:
   gnome:
     base: "gsettings set"
+    extension: "gnome-shell-extension-tool -e"
   rpm_ostree:
     remove: "rpm-ostree override remove"
     install: "rpm-ostree install"
@@ -23,6 +24,13 @@ action:
       - "org.gnome.GWeather4 temperature-unit 'centigrade'" # Weather app top bar set centigrade
       - "org.gnome.shell app-picker-layout []" # Sort apps alphabetically
       - "org.gnome.desktop.interface gtk-theme Adwaita-dark" # Legacy apps dark mode
+    extension:
+      - "background-logo@fedorahosted.org"
+      - "dash-to-dock@micxgx.gmail.com"
+      - "appindicatorsupport@rgcjonas.gmail.com"
+      - "pano@elhan.io"
+      - "caffeine@patapon.info"
+      - "gsconnect@andyholmes.github.io"
   rpm_ostree:
     remove:
       - "firefox firefox-langpacks gnome-tour yelp"

@@ -33,7 +33,6 @@ action:
       - "flatpak.config"
       - "system.config"
       - "gnome.base"
-      - "gnome.favs"
       - "gnome.extension"
     toolbox:
       - "toolbox.profile"
@@ -105,7 +104,7 @@ action:
       - "$HOME/.config/vim"
       - "$HOME/.config/zsh"
   system:
-    config: 
+    config:
       - "_/zprofile /etc/zprofile"
       - "_/pythonrc /etc/pythonrc"
       - "_/zram-generator.conf /etc/systemd/zram-generator.conf"

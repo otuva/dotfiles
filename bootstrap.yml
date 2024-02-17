@@ -5,6 +5,8 @@ command:
   gnome:
     base: "gsettings set"
     extension: "gnome-extensions enable"
+    extconf: "gsettings set"
+    schema: "echo 'schema update' &&"
   rpm_ostree:
     remove: "rpm-ostree override remove"
     install: "rpm-ostree install"
@@ -60,6 +62,27 @@ action:
       - "pano@elhan.io"
       - "caffeine@patapon.info"
       - "gsconnect@andyholmes.github.io"
+    extconf:
+      - "org.gnome.Shell.Extensions.GSConnect create-native-messaging-hosts false"
+      - "org.gnome.shell.extensions.appindicator icon-saturation 1"
+      - "org.gnome.shell.extensions.appindicator icon-size 20"
+      - "org.gnome.shell.extensions.appindicator tray-pos 'left'"
+      - "org.gnome.shell.extensions.dash-to-dock apply-custom-theme true"
+      - "org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 48"
+      - "org.gnome.shell.extensions.dash-to-dock dock-position 'LEFT'"
+      - "org.gnome.shell.extensions.dash-to-dock icon-size-fixed true"
+      - "org.gnome.shell.extensions.dash-to-dock isolate-monitors true"
+      - "org.gnome.shell.extensions.dash-to-dock isolate-workspaces true"
+      - "org.gnome.shell.extensions.dash-to-dock show-mounts false"
+      - "org.gnome.shell.extensions.pano history-length 100"
+      - "org.gnome.shell.extensions.pano keep-search-entry false"
+      - "org.gnome.shell.extensions.pano open-links-in-browser false"
+      - "org.gnome.shell.extensions.pano paste-on-select false"
+      - "org.gnome.shell.extensions.pano play-audio-on-copy false"
+      - "org.gnome.shell.extensions.pano send-notification-on-copy false"
+    schema:
+      - "cp $HOME/.local/share/gnome-shell/extensions/*/schemas/*gschema.xml $HOME/.local/share/glib-2.0/schemas"
+      - "glib-compile-schemas $HOME/.local/share/glib-2.0/schemas"
   rpm_ostree:
     remove:
       - "firefox firefox-langpacks gnome-tour yelp"
@@ -94,6 +117,7 @@ action:
       - "$HOME/.local/state/bash"
       - "$HOME/.var/app/com.github.Eloston.UngoogledChromium/config"
       - "$HOME/.var/app/io.mpv.Mpv/config/mpv"
+      - "$HOME/.local/share/glib-2.0/schemas"
     remove:
       - "$HOME/.local/share/applications"
       - "$HOME/.local/share/flatpak/overrides"

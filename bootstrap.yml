@@ -95,6 +95,7 @@ action:
       - com.github.tchx84.Flatseal
       - com.mattjakeman.ExtensionManager
       - com.vscodium.codium
+      - io.github.kotatogram
       - io.github.slgobinath.SafeEyes
       - io.gitlab.librewolf-community
       - io.mpv.Mpv
@@ -105,7 +106,6 @@ action:
       - org.mozilla.Thunderbird
       - org.nickvision.tubeconverter
       - org.qbittorrent.qBittorrent
-      - org.telegram.desktop
       - org.torproject.torbrowser-launcher
     config:
       - "_/flatpak/chromium-flags.conf $HOME/.var/app/com.github.Eloston.UngoogledChromium/config/chromium-flags.conf"

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo
+echo '========================================='
+echo 'Go to: https://archive.org/account/s3.php'
+echo '========================================='
+echo
+
+echo "Your S3 access key:"
+secret-tool store --label "Wayback - accesskey" wayback accesskey
+
+echo
+echo "Your S3 secret key:"
+secret-tool store --label "Wayback - secretkey" wayback secretkey
+
+echo
+echo "Done"

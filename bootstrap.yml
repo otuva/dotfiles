@@ -20,6 +20,7 @@ command:
     config: "sudo cp" # copy files to various places
     stow: "stow -t ~"
     virt: "sudo systemctl enable --now"
+    nvidia: "echo 'installing nvidia' &&"
   toolbox:
     required: "sudo dnf install --assumeyes"
     profile: "echo"
@@ -144,6 +145,15 @@ action:
       - "zsh"
     virt:
       - "virtnetworkd"
+    nvidia:
+      - "rpm-ostree install rpmdevtools akmods akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda
+      - "sudo kmodgenca"
+      - "sudo mokutil --import /etc/pki/akmods/certs/public_key.der"
+      - "git clone https://github.com/CheariX/silverblue-akmods-keys /tmp/akmods"
+      - "cd /tmp/akmods"
+      - "sudo bash setup.sh"
+      - "rpm-ostree install akmods-keys-0.0.2-8.fc$(rpm -E %fedora).noarch.rpm"
+      - "rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1 initcall_blacklist=simpledrm_platform_driver_init"
   toolbox:
     required:
       - "stow"

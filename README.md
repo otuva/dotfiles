@@ -2,12 +2,8 @@
 
 ## Installation
 
-Install GNU `stow`
-
 ```bash
-git clone --recursive https://github.com/otuva/dotfiles
-cd dotfiles
-stow -t ~ git vim zsh # ...
+git clone --recursive https://github.com/otuva/dotfiles ~/.config/dotfiles
 ```
 
 For quick start after a clean install:

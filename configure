@@ -19,7 +19,7 @@ parser.add_argument("--command",
 parser.add_argument("--show",
                     metavar="path",
                     help="Show which command would be executed",
-                    )         
+                    )
 
 # ---------------------------------------
 # -------------actual-script-------------
@@ -38,11 +38,14 @@ def add_command_to_history(command):
             file.write(command + "\n") # append missing data
 
 def command_exists_in_history(command):
-    with open("history", "r") as file:
-        for line in file:
-            if line.rstrip("\n\r") == command:
-                return True
-        return False
+    try:
+        with open("history", "r") as file:
+            for line in file:
+                if line.rstrip("\n\r") == command:
+                    return True
+            return False
+    except FileNotFoundError:
+        open("history", "w+")
 
 def print_dict_keys(dictionary):
     for key, value in dictionary.items():
@@ -76,7 +79,7 @@ def main(bst):
 
         action = get_dict_key(bst.get("action"), args.show)
         assert isinstance(action, list), "command actions must be a list, fix yaml file"
-        
+
         for act in action:
             print(f"{command} {act}")
     elif (args.command):

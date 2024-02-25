@@ -115,7 +115,6 @@ action:
       - "$HOME/.local/state/zsh"
       - "$HOME/.local/state/bash"
       - "$HOME/.var/app/org.chromium.Chromium/config"
-      - "$HOME/.var/app/io.mpv.Mpv/config/mpv"
       - "$HOME/.local/share/glib-2.0/schemas"
     remove:
       - "$HOME/.local/share/applications"

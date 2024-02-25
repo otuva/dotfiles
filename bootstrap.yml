@@ -110,8 +110,6 @@ action:
       - org.torproject.torbrowser-launcher
     config:
       - "_/flatpak/chromium-flags.conf $HOME/.var/app/org.chromium.Chromium/config/chromium-flags.conf"
-      - "mpv/.config/mpv/input.conf $HOME/.var/app/io.mpv.Mpv/config/mpv"
-      - "mpv/.config/mpv/mpv.conf $HOME/.var/app/io.mpv.Mpv/config/mpv"
   directory:
     create:
       - "$HOME/.local/state/zsh"

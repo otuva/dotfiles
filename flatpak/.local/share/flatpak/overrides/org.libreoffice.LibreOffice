@@ -1,2 +1,3 @@
 [Context]
-filesystems=xdg-documents;!host
+sockets=!pulseaudio;!fallback-x11;!x11
+filesystems=!xdg-config/fontconfig;!xdg-run/gvfsd;!xdg-config/gtk-3.0;xdg-documents;!host

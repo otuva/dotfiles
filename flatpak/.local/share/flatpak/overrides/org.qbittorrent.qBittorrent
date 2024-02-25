@@ -1,6 +1,6 @@
 [Context]
 sockets=!fallback-x11;!x11
-filesystems=!home
+filesystems=!xdg-config/kdeglobals;!home;!host
 persistent=Downloads;qbt-themev2.1
 
 [Environment]

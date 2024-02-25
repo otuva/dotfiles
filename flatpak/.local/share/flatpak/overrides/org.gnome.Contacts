@@ -1,0 +1,2 @@
+[Context]
+filesystems=!xdg-cache/evolution/addressbook;!xdg-data/pixmaps/faces

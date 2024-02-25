@@ -1,8 +1,8 @@
 [Context]
-sockets=!ssh-auth;!pulseaudio;!x11
+sockets=!ssh-auth;!pulseaudio;!fallback-x11;!x11
 devices=!all;dri
 features=!devel
-filesystems=!xdg-config/kdeglobals;!xdg-run/gnupg;!host
+filesystems=!xdg-config/kdeglobals;!xdg-run/gnupg;xdg-config/dotfiles;!host
 persistent=.
 
 [Environment]

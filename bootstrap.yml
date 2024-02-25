@@ -145,6 +145,8 @@ action:
       - "zsh"
     virt:
       - "virtnetworkd"
+      - "virtstoraged"
+      - "virtnodedevd"
     nvidia:
       - "rpm-ostree install rpmdevtools akmods akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda"
       - "sudo kmodgenca"

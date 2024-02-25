@@ -25,11 +25,31 @@ parser.add_argument("--show",
 # -------------actual-script-------------
 # ---------------------------------------
 
-def print_dict_keys(dictionary, indent=0):
+def add_command_to_history(command):
+    with open("history", "a+") as file:
+        ends_with_newline = True
+        for line in file:
+            ends_with_newline = line.endswith("\n")
+            if line.rstrip("\n\r") == command:
+                break
+        else: # not found, we are at the eof
+            if not ends_with_newline:
+                file.write("\n")
+            file.write(command + "\n") # append missing data
+
+def command_exists_in_history(command):
+    with open("history", "r") as file:
+        for line in file:
+            if line.rstrip("\n\r") == command:
+                return True
+        return False
+
+def print_dict_keys(dictionary):
     for key, value in dictionary.items():
-        print(" " * indent, key)
+        print(key)
         if (isinstance(value, dict)):
-            print_dict_keys(value, indent+4)
+            for sec_key, sec_value in value.items():
+                print(f"\t {"✔" if (command_exists_in_history(f"{key}.{sec_key}")) else " "}", sec_key, f"\t\t({key}.{sec_key})")
 
 def get_dict_key(dictionary, keys):
     assert dictionary is not None, "key error. check if command exists"
@@ -65,6 +85,8 @@ def main(bst):
 
         action = get_dict_key(bst.get("action"), args.command)
         assert isinstance(action, list), "command actions must be a list, fix yaml file"
+
+        add_command_to_history(args.command)
 
         for act in action:
             run_command(f"{command} {act}")

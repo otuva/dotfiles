@@ -164,6 +164,7 @@ action:
       - "python3-pyyaml"
       - "lm_sensors"
       - "nmap"
+      - "tor"
     profile:
       - "'export XDG_DATA_HOME=\"${HOME}/.local/share\"' | sudo tee -a /etc/profile"
       - "'export XDG_CONFIG_HOME=\"${HOME}/.config\"' | sudo tee -a /etc/profile"

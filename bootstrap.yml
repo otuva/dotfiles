@@ -24,6 +24,8 @@ command:
   toolbox:
     required: "sudo dnf install --assumeyes"
     profile: "echo"
+  vm:
+    dfpool: "virsh"
 
 action:
   all:
@@ -174,3 +176,10 @@ action:
       - "'export XDG_CACHE_HOME=\"${HOME}/.cache\"' | sudo tee -a /etc/profile"
       - "'export HISTFILE=\"${XDG_STATE_HOME}\"/bash/history' | sudo tee -a /etc/profile"
       - "'alias dnf=\"sudo dnf\"' | sudo tee -a /etc/profile"
+  vm:
+    dfpool:
+      - "pool-destroy default"
+      - "pool-undefine default"
+      - "pool-define-as --name default --type dir --target /var/mnt/ed08a9de-49ce-437a-aa99-e863c78742b4/qemu/img"
+      - "pool-autostart default"
+      - "pool-start default"

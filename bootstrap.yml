@@ -16,6 +16,7 @@ command:
   directory:
     create: "mkdir -p" # create directories required by things
     remove: "rm -rf" # scary :P / remove before stow
+    rmbrowser: "rm -r"
   system:
     config: "sudo cp" # copy files to various places
     stow: "stow -t ~"
@@ -135,6 +136,15 @@ action:
       - "$HOME/.local/bin"
       - "$HOME/.config/vim"
       - "$HOME/.config/zsh"
+    rmbrowser:
+      - "$HOME/.config/chromium"
+      - "$HOME/.config/google-chrome"
+      - "$HOME/.config/google-chrome-beta"
+      - "$HOME/.config/google-chrome-unstable"
+      - "$HOME/.config/BraveSoftware"
+      - "$HOME/.config/microsoft-edge-dev"
+      - "$HOME/.config/microsoft-edge-beta"
+      - "$HOME/.mozilla"
   system:
     config:
       - "_/zprofile /etc/zprofile"

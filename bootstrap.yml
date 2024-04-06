@@ -1,3 +1,5 @@
+# todo: add description for --list
+
 command:
   all: 
     base: "./configure --command"

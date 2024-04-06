@@ -102,6 +102,7 @@ action:
       - com.github.johnfactotum.Foliate
       - com.github.tchx84.Flatseal
       - com.mattjakeman.ExtensionManager
+      - com.valvesoftware.Steam
       - com.vscodium.codium
       - io.github.slgobinath.SafeEyes
       - io.gitlab.librewolf-community

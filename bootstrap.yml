@@ -26,6 +26,7 @@ command:
     profile: "echo"
   vm:
     dfpool: "virsh"
+    mvconfig: "[[ ! -h $HOME/.config/libvirt ]] &&"
 
 action:
   all:
@@ -185,3 +186,6 @@ action:
       - "pool-define-as --name default --type dir --target /var/mnt/data/qemu/img"
       - "pool-autostart default"
       - "pool-start default"
+    mvconfig:
+      - "mv $HOME/.config/libvirt /var/mnt/data/qemu/"
+      - "ln -s /var/mnt/data/qemu/libvirt $HOME/.config/libvirt"

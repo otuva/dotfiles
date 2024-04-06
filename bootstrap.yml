@@ -181,6 +181,6 @@ action:
     dfpool:
       - "pool-destroy default"
       - "pool-undefine default"
-      - "pool-define-as --name default --type dir --target /var/mnt/ed08a9de-49ce-437a-aa99-e863c78742b4/qemu/img"
+      - "pool-define-as --name default --type dir --target /var/mnt/data/qemu/img"
       - "pool-autostart default"
       - "pool-start default"

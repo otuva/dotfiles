@@ -2,4 +2,4 @@
 sockets=!pulseaudio
 devices=!all
 features=!bluetooth
-filesystems=!xdg-desktop;!xdg-documents;!~/.steam;!xdg-download;!xdg-videos;!xdg-music;!xdg-pictures;!xdg-data/Steam;/mnt/ed08a9de-49ce-437a-aa99-e863c78742b4/games/steam
+filesystems=!xdg-desktop;!xdg-documents;!~/.steam;!xdg-download;!xdg-videos;!xdg-music;!xdg-pictures;!xdg-data/Steam;/mnt/data/games/steam

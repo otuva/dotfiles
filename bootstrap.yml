@@ -51,6 +51,7 @@ action:
     base:
       - "org.gnome.GWeather4 temperature-unit 'centigrade'" # Weather app top bar set centigrade
       - "org.gnome.shell app-picker-layout []" # Sort apps alphabetically
+      - "org.gnome.desktop.interface icon-theme Numix-Circle" # icons
       - "org.gnome.desktop.interface gtk-theme Adwaita-dark" # Legacy apps dark mode
       - "org.gnome.desktop.interface color-scheme 'prefer-dark'" # dark mode
       - "org.gnome.desktop.interface clock-show-seconds true" # seconds

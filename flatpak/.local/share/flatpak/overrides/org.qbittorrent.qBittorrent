@@ -1,7 +1,7 @@
 [Context]
 sockets=!fallback-x11;!x11
 filesystems=!xdg-config/kdeglobals;!home;!host
-persistent=Downloads;qbt-themev2.1
+persistent=Downloads
 
 [Environment]
 QT_SCALE_FACTOR=1.25

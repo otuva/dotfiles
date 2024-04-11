@@ -1,6 +1,6 @@
 [Context]
 features=!bluetooth
-filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord;/mnt/data/games/steam
+filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord;/run/media/tfp/GameBackups;/mnt/data/games/steam
 
 [Environment]
 HISTFILE=/home/tfp/.bash_history

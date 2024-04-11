@@ -1,4 +1,6 @@
 # todo: add description for --list
+#       add startup apps
+#       sync mail profiles
 
 command:
   all: 

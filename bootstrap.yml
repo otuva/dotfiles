@@ -1,6 +1,7 @@
 # todo: add description for --list
 #       add startup apps
 #       sync mail profiles
+#       sync installed packages to yaml file with new changes. (flatpak and rpm)
 
 command:
   all: 

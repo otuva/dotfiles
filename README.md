@@ -11,7 +11,3 @@ For quick start after a clean install:
 ```bash
 ./configure --help
 ```
-
-## TODO
-
-- Sync yaml packages file with new changes. For both flatpak and rpm

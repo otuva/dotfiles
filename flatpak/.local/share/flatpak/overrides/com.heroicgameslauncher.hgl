@@ -1,2 +1,2 @@
 [Context]
-filesystems=!~/.steam;!xdg-run/app/com.discordapp.Discord;!xdg-desktop;!~/Games/Heroic;!xdg-data/lutris;!xdg-documents;!xdg-data/applications;!/run/media;!/run/udev;!~/.var/app/com.valvesoftware.Steam;!/mnt;!xdg-data/Steam;/mnt/data/games/heroic
+filesystems=!~/.steam;!xdg-run/app/com.discordapp.Discord;!xdg-desktop;!~/Games/Heroic;!xdg-documents;!~/.local/share/lutris;!/media;!/run/media;!/run/udev;!~/.var/app/com.valvesoftware.Steam;!/mnt;!~/.steam/steam;!~/.local/share/applications;!xdg-run/gamescope-0;/mnt/data/games/heroic

@@ -26,8 +26,12 @@ prompt_end() {
   CURRENT_BG=''
 }"""
 
+prompt_replacement = 'PROMPT="$TOOLBOX_ACCENT$PROMPT"\n\n'
+
 # Replace the pattern with the replacement text
 new_file_contents = re.sub(pattern, replacement, file_contents)
+if (file_contents.find(prompt_replacement)) == -1:
+    new_file_contents += prompt_replacement
 
 # Open the file in write mode
 with open(z_f, 'w') as f:

@@ -25,12 +25,12 @@ command:
   system:
     config: "sudo cp" # copy files to various places
     stow: "stow -t ~"
-    virt: "sudo systemctl enable --now"
     nvidia: "echo 'installing nvidia' &&"
   toolbox:
     required: "sudo dnf install --assumeyes"
-    profile: "echo"
+    profile: "echo 'setting up toolbox profile' &&"
   vm:
+    enable: "sudo systemctl enable --now"
     dfpool: "virsh"
     mvconfig: "[[ ! -h $HOME/.config/libvirt ]] &&"
 
@@ -167,10 +167,6 @@ action:
       - "scripts"
       - "vim"
       - "zsh"
-    virt:
-      - "virtnetworkd"
-      - "virtstoraged"
-      - "virtnodedevd"
     nvidia:
       - "rpm-ostree install rpmdevtools akmods akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda"
       - "sudo kmodgenca"
@@ -188,14 +184,19 @@ action:
       - "nmap"
       - "tor"
       - "vim"
+      - "zsh"
     profile:
-      - "'export XDG_DATA_HOME=\"${HOME}/.local/share\"' | sudo tee -a /etc/profile"
-      - "'export XDG_CONFIG_HOME=\"${HOME}/.config\"' | sudo tee -a /etc/profile"
-      - "'export XDG_STATE_HOME=\"${HOME}/.local/state\"' | sudo tee -a /etc/profile"
-      - "'export XDG_CACHE_HOME=\"${HOME}/.cache\"' | sudo tee -a /etc/profile"
-      - "'export HISTFILE=\"${XDG_STATE_HOME}\"/bash/history' | sudo tee -a /etc/profile"
-      - "'alias dnf=\"sudo dnf\"' | sudo tee -a /etc/profile"
+      - "sudo rm /etc/zprofile"
+      - "sudo rm /etc/zshenv"
+      - "sudo cp _/zprofile /etc/zprofile"
+      - "echo 'alias dnf=\"sudo dnf\"' | sudo tee -a /etc/zshenv"
+      - "echo 'zsh-newuser-install() { :; }' | sudo tee -a /etc/zshenv"
   vm:
+    enable:
+      - "virtnetworkd"
+      - "virtstoraged"
+      - "virtnodedevd"
+      - "virtqemud"
     dfpool:
       - "pool-destroy default"
       - "pool-undefine default"

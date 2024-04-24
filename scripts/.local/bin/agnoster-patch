@@ -26,7 +26,7 @@ prompt_end() {
   CURRENT_BG=''
 }"""
 
-prompt_replacement = 'PROMPT="$TOOLBOX_ACCENT$PROMPT"\n\n'
+prompt_replacement = 'PROMPT="$TOOLBOX_ACCENT$PROMPT"\n'
 
 # Replace the pattern with the replacement text
 new_file_contents = re.sub(pattern, replacement, file_contents)

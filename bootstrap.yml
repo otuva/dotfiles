@@ -37,6 +37,40 @@ command:
     dfpool: "virsh"
     mvconfig: "[[ ! -h $HOME/.config/libvirt ]] &&"
 
+description:
+  meta:
+    all: "meant for setting up everything without any interaction"
+    base: "install/remove programs and configure them"
+    toolbox: "setup toolbox profile and place dotfiles"
+    extension: "install gnome extensions and configure them"
+    podmanexec: "wrapper for the meta.toolbox. installs required dependency before running"
+  gnome:
+    base: "basic gnome settings"
+    extinstall: "use script to install given extension list"
+    extconf: "configure extensions"
+    extschema: "copy and compile extensions schemas"
+  rpm_ostree:
+    remove: "remove layered packages"
+    install: "layer packages"
+  flatpak:
+    install: "install given flatpak app list from flathub"
+    config: "configure flatpak settings outside of override"
+  directory:
+    create: "create necessary directories for operations" # create directories required by things
+    remove: "remove dotfile locations before stow" # scary :P / remove before stow
+    rmbrowser: "remove browser artifacts. might be destructive"
+  system:
+    config: "copy system config files to their locations" # copy files to various places
+    stow: "use stow for dotfiles. might require directory.remove beforehand"
+    nvidia: "install nvidia prop drivers and akmods keys for secureboot via nvidia"
+  toolbox:
+    required: "install required programs for toolbox"
+    profile: "configure profiles under etc for similar look to the host system"
+  vm:
+    enable: "activate virt services"
+    dfpool: "destroy default pool and change pool to some other disk"
+    mvconfig: "move config and snapshots to the dfpool location so machines can be moved at whim"
+
 action:
   meta:
     all:

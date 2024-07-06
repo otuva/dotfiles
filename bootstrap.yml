@@ -6,9 +6,9 @@
 command:
   meta:
     all: "echo 'setting up everything' &&"
-    base: "./configure --command"
-    toolbox: "./configure --command"
-    extension: "./configure --command"
+    base: "./configure --cmd"
+    toolbox: "./configure --cmd"
+    extension: "./configure --cmd"
     podmanexec: "podman exec -w \"$(pwd)\" fedora-toolbox-$(grep 'VERSION_ID=' /etc/os-release | cut -d'=' -f2 | tr -d '\"')"
   gnome:
     base: "gsettings set"
@@ -74,10 +74,10 @@ description:
 action:
   meta:
     all:
-      - "./configure --command meta.base"
+      - "./configure --cmd meta.base"
       - "toolbox -y create"
-      - "./configure --command meta.podmanexec"
-      - "./configure --command meta.extension"
+      - "./configure --cmd meta.podmanexec"
+      - "./configure --cmd meta.extension"
     base:
       - "directory.create"
       - "rpm_ostree.remove"
@@ -97,7 +97,7 @@ action:
       - "gnome.extconf"
     podmanexec:
       - "sudo dnf install -y python3-pyyaml"
-      - "./configure --command meta.toolbox"
+      - "./configure --cmd meta.toolbox"
   gnome:
     base:
       - "org.gnome.GWeather4 temperature-unit 'centigrade'" # Weather app top bar set centigrade

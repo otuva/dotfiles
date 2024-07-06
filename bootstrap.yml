@@ -115,6 +115,7 @@ action:
       - "org.gnome.desktop.wm.keybindings switch-windows \"['<Alt>Tab']\""
       - "org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in \"['<Alt>w']\""
       - "org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-out \"['<Alt>s']\""
+      - "org.gnome.settings-daemon.plugins.media-keys magnifier \"['<Alt>e']\""
     extinstall:
       - "background-logo@fedorahosted.org"
       - "dash-to-dock@micxgx.gmail.com"

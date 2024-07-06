@@ -9,7 +9,7 @@ command:
     base: "./configure --command"
     toolbox: "./configure --command"
     extension: "./configure --command"
-    podmanexec: "podman exec fedora-toolbox-$(grep 'VERSION_ID=' /etc/os-release | cut -d'=' -f2 | tr -d '\"')"
+    podmanexec: "podman exec -w \"$(pwd)\" fedora-toolbox-$(grep 'VERSION_ID=' /etc/os-release | cut -d'=' -f2 | tr -d '\"')"
   gnome:
     base: "gsettings set"
     extinstall: "./scripts/.local/bin/extension-install"
@@ -62,8 +62,8 @@ action:
       - "gnome.extschema"
       - "gnome.extconf"
     podmanexec:
-      - "'sudo dnf install -y python3-pyyaml'"
-      - "'./configure --command meta.toolbox'"
+      - "sudo dnf install -y python3-pyyaml"
+      - "./configure --command meta.toolbox"
   gnome:
     base:
       - "org.gnome.GWeather4 temperature-unit 'centigrade'" # Weather app top bar set centigrade
@@ -192,7 +192,6 @@ action:
   toolbox:
     required:
       - "stow"
-      - "python3-pyyaml"
       - "lm_sensors"
       - "nmap"
       - "tor"

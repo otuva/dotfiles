@@ -221,9 +221,9 @@ action:
       - "sudo kmodgenca"
       - "sudo mokutil --import /etc/pki/akmods/certs/public_key.der"
       - "git clone https://github.com/CheariX/silverblue-akmods-keys /tmp/akmods"
-      - "sudo bash /tmp/akmods/setup.sh"
-      - "rpm-ostree install /tmp/akmods/akmods-keys-0.0.2-8.fc$(rpm -E %fedora).noarch.rpm"
-      - "rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1 initcall_blacklist=simpledrm_platform_driver_init"
+      - "cd /tmp/akmods && sudo bash setup.sh"
+      - "cd /tmp/akmods && rpm-ostree install /tmp/akmods/akmods-keys-0.0.2-8.fc$(rpm -E %fedora).noarch.rpm"
+      - "rpm-ostree kargs --append-if-missing=rd.driver.blacklist=nouveau --append-if-missing=modprobe.blacklist=nouveau --append-if-missing=nvidia-drm.modeset=1 initcall_blacklist=simpledrm_platform_driver_init"
   toolbox:
     required:
       - "stow"

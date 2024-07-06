@@ -30,7 +30,7 @@ command:
     stow: "stow -t ~"
     nvidia: "echo 'installing nvidia' &&"
   toolbox:
-    required: "sudo dnf install --assumeyes"
+    required: "sudo dnf install -y"
     profile: "echo 'setting up toolbox profile' &&"
   vm:
     enable: "sudo systemctl enable --now"
@@ -46,7 +46,6 @@ action:
       - "./configure --command meta.extension"
     base:
       - "directory.create"
-      - "directory.remove"
       - "rpm_ostree.remove"
       - "rpm_ostree.install"
       - "flatpak.install"
@@ -56,6 +55,7 @@ action:
     toolbox:
       - "toolbox.profile"
       - "toolbox.required"
+      - "directory.remove"
       - "system.stow"
     extension:
       - "gnome.extinstall"

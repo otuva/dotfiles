@@ -8,15 +8,18 @@ import argparse
 # --------------argument-parse--------------
 # ------------------------------------------
 parser = argparse.ArgumentParser(description='Configure the system')
-parser.add_argument("--list",
+parser.add_argument("-l",
+                    "--list",
                     help="List every command you can execute",
                     action='store_true'
                     )
-parser.add_argument("--command",
+parser.add_argument("-c",
+                    "--cmd",
                     metavar="path",
                     help="Execute command",
                     )
-parser.add_argument("--show",
+parser.add_argument("-s",
+                    "--show",
                     metavar="path",
                     help="Show which command would be executed",
                     )
@@ -47,12 +50,19 @@ def command_exists_in_history(command):
     except FileNotFoundError:
         open("history", "w+")
 
-def print_dict_keys(dictionary):
-    for key, value in dictionary.items():
-        print(key)
-        if (isinstance(value, dict)):
-            for sec_key, sec_value in value.items():
-                print(f"\t {"✔" if (command_exists_in_history(f"{key}.{sec_key}")) else " "}", sec_key, f"\t\t({key}.{sec_key})")
+def print_dict_keys(commands, descriptions):
+    for key, value in commands.items():
+        print("\n", key)
+
+        if isinstance(value, dict):
+            for sub_key, sub_value in value.items():
+                full_command = f"{key}.{sub_key}"
+                exists_mark = "✔" if command_exists_in_history(full_command) else " "
+
+                # Fetch description from the nested structure:
+                description = descriptions.get(key, {}).get(sub_key, "No description available")
+
+                print(f"\t {exists_mark} {sub_key:10} \t\t|{full_command.center(25)}|\t\t{description}")
 
 def get_dict_key(dictionary, keys):
     assert dictionary is not None, "key error. check if command exists"
@@ -72,7 +82,7 @@ def main(bst):
     args = parser.parse_args()
 
     if (args.list):
-        print_dict_keys(bst.get("command"))
+        print_dict_keys(bst.get("command"), bst.get("description"))
     elif (args.show):
         command = get_dict_key(bst.get("command"), args.show)
         assert isinstance(command, str), "command must not be parent, incorrect usage"
@@ -82,14 +92,14 @@ def main(bst):
 
         for act in action:
             print(f"{command} {act}")
-    elif (args.command):
-        command = get_dict_key(bst.get("command"), args.command)
+    elif (args.cmd):
+        command = get_dict_key(bst.get("command"), args.cmd)
         assert isinstance(command, str), "command must not be parent, incorrect usage"
 
-        action = get_dict_key(bst.get("action"), args.command)
+        action = get_dict_key(bst.get("action"), args.cmd)
         assert isinstance(action, list), "command actions must be a list, fix yaml file"
 
-        add_command_to_history(args.command)
+        add_command_to_history(args.cmd)
 
         for act in action:
             run_command(f"{command} {act}")

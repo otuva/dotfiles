@@ -1,7 +1,6 @@
 [Context]
 sockets=!ssh-auth
-devices=!all;kvm;dri
-filesystems=!xdg-run/keyring;~/Dev/flutter;~/Dev/android;!host
+filesystems=!xdg-run/keyring;!host
 persistent=.
 
 [Environment]
@@ -10,3 +9,4 @@ HISTFILE=/home/tfp/.bash_history
 
 [Session Bus Policy]
 org.freedesktop.Flatpak=none
+org.freedesktop.secrets=none

@@ -95,6 +95,7 @@ action:
       - "gnome.extinstall"
       - "gnome.extschema"
       - "gnome.extconf"
+      - "directory.rmbrowser"
     podmanexec:
       - "sudo dnf install -y python3-pyyaml"
       - "./configure --cmd meta.toolbox"

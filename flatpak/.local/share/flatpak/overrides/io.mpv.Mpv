@@ -1,4 +1,4 @@
 [Context]
 sockets=!fallback-x11;!x11
 devices=!all;dri
-filesystems=!~/.var/app/io.mpv.Mpv/config/mpv/scripts;!xdg-videos;!/tmp;!xdg-pictures;!xdg-run/pipewire-0;xdg-download/Torrents:ro;xdg-config/mpv;!host
+filesystems=!~/.var/app/io.mpv.Mpv/config/mpv/scripts;!xdg-videos;!/tmp;!xdg-pictures;!xdg-run/pipewire-0;xdg-download/Torrent:ro;xdg-config/mpv;!host

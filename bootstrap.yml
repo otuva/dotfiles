@@ -4,14 +4,17 @@
 #       sync installed packages to yaml file with new changes. (flatpak and rpm)
 
 command:
-  all: 
+  meta:
+    all: "echo 'setting up everything' &&"
     base: "./configure --command"
     toolbox: "./configure --command"
+    extension: "./configure --command"
+    podmanexec: "podman exec fedora-toolbox-$(grep 'VERSION_ID=' /etc/os-release | cut -d'=' -f2 | tr -d '\"')"
   gnome:
     base: "gsettings set"
-    extension: "gnome-extensions enable"
+    extinstall: "./scripts/.local/bin/extension-install"
     extconf: "gsettings set"
-    schema: "echo 'schema update' &&"
+    extschema: "echo 'schema update' &&"
   rpm_ostree:
     remove: "rpm-ostree override remove"
     install: "rpm-ostree install"
@@ -35,7 +38,12 @@ command:
     mvconfig: "[[ ! -h $HOME/.config/libvirt ]] &&"
 
 action:
-  all:
+  meta:
+    all:
+      - "./configure --command meta.base"
+      - "toolbox -y create"
+      - "./configure --command meta.podmanexec"
+      - "./configure --command meta.extension"
     base:
       - "directory.create"
       - "directory.remove"
@@ -45,11 +53,17 @@ action:
       - "flatpak.config"
       - "system.config"
       - "gnome.base"
-      - "gnome.extension"
     toolbox:
       - "toolbox.profile"
       - "toolbox.required"
       - "system.stow"
+    extension:
+      - "gnome.extinstall"
+      - "gnome.extschema"
+      - "gnome.extconf"
+    podmanexec:
+      - "'sudo dnf install -y python3-pyyaml'"
+      - "'./configure --command meta.toolbox'"
   gnome:
     base:
       - "org.gnome.GWeather4 temperature-unit 'centigrade'" # Weather app top bar set centigrade
@@ -66,7 +80,7 @@ action:
       - "org.gnome.desktop.wm.keybindings switch-windows \"['<Alt>Tab']\""
       - "org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in \"['<Alt>w']\""
       - "org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-out \"['<Alt>s']\""
-    extension:
+    extinstall:
       - "background-logo@fedorahosted.org"
       - "dash-to-dock@micxgx.gmail.com"
       - "appindicatorsupport@rgcjonas.gmail.com"
@@ -96,7 +110,7 @@ action:
       - "org.fedorahosted.background-logo-extension logo-opacity 180"
       - "org.fedorahosted.background-logo-extension logo-position 'bottom-right'"
       - "org.fedorahosted.background-logo-extension logo-size 9.0"
-    schema:
+    extschema:
       - "cp $HOME/.local/share/gnome-shell/extensions/*/schemas/*gschema.xml $HOME/.local/share/glib-2.0/schemas"
       - "glib-compile-schemas $HOME/.local/share/glib-2.0/schemas"
   rpm_ostree:
@@ -168,13 +182,12 @@ action:
       - "vim"
       - "zsh"
     nvidia:
-      - "rpm-ostree install rpmdevtools akmods akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda"
+      - "rpm-ostree install --apply-live rpmdevtools akmods akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda"
       - "sudo kmodgenca"
       - "sudo mokutil --import /etc/pki/akmods/certs/public_key.der"
       - "git clone https://github.com/CheariX/silverblue-akmods-keys /tmp/akmods"
-      - "cd /tmp/akmods"
-      - "sudo bash setup.sh"
-      - "rpm-ostree install akmods-keys-0.0.2-8.fc$(rpm -E %fedora).noarch.rpm"
+      - "sudo bash /tmp/akmods/setup.sh"
+      - "rpm-ostree install /tmp/akmods/akmods-keys-0.0.2-8.fc$(rpm -E %fedora).noarch.rpm"
       - "rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1 initcall_blacklist=simpledrm_platform_driver_init"
   toolbox:
     required:

@@ -21,6 +21,10 @@ COMPLETION_WAITING_DOTS="true" # display red dots whilst waiting for completion.
 
 plugins=(git) # Standard plugins can be found in $ZSH/plugins/
 
+HISTSIZE=999999999
+
+SAVEHIST=$HISTSIZE
+
 # ------------------------------------------------------------
 # -------------------------functions--------------------------
 # ------------------------------------------------------------

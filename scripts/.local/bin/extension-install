@@ -10,8 +10,16 @@ shell_version=$(gnome-shell --version | cut -d' ' -f3)
 # 2. Fetch extension info (for the given shell version)
 info_json=$(curl -sS "https://extensions.gnome.org/extension-info/?uuid=$uuid&shell_version=$shell_version")
 
-# 3. Extract download url from the json with jq
-download_url=$(echo $info_json | jq --raw-output ".download_url" )
+if echo "$info_json" | jq -e . >/dev/null 2>&1; then
+    # Valid JSON, extract download URL
 
-# 4. Install the extension
-gnome-extensions install "https://extensions.gnome.org$download_url"
+    # 3. Extract download url from the json with jq
+    download_url=$(echo "$info_json" | jq --raw-output ".download_url")
+
+    # 4. Install the extension
+    gnome-extensions install "https://extensions.gnome.org$download_url"
+else
+    # Not valid JSON, handle the error
+    echo "Error: Could not find extension information for $uuid" >&2 
+    exit 1  # Exit with an error code
+fi

@@ -10,6 +10,7 @@ command:
     toolbox: "./configure --cmd"
     extension: "./configure --cmd"
     podmanexec: "podman exec -w \"$(pwd)\" fedora-toolbox-$(grep 'VERSION_ID=' /etc/os-release | cut -d'=' -f2 | tr -d '\"')"
+    virt: "./configure --cmd"
   gnome:
     base: "gsettings set"
     extinstall: "./scripts/.local/bin/extension-install"
@@ -44,6 +45,7 @@ description:
     toolbox: "setup toolbox profile and place dotfiles"
     extension: "install gnome extensions and configure them"
     podmanexec: "wrapper for the meta.toolbox. installs required dependency before running"
+    virt: "setup virt-manager and move configuration under /var/mnt/data/qemu"
   gnome:
     base: "basic gnome settings"
     extinstall: "use script to install given extension list"
@@ -99,6 +101,10 @@ action:
     podmanexec:
       - "sudo dnf install -y python3-pyyaml"
       - "./configure --cmd meta.toolbox"
+    virt:
+      - "vm.enable"
+      - "vm.dfpool"
+      - "vm.enable"
   gnome:
     base:
       - "org.gnome.GWeather4 temperature-unit 'centigrade'" # Weather app top bar set centigrade
@@ -247,7 +253,7 @@ action:
       - "virtqemud"
     dfpool:
       - "pool-destroy default"
-      - "pool-undefine default"
+      - "pool-undefine default && mkdir -p /var/mnt/data/qemu/img"
       - "pool-define-as --name default --type dir --target /var/mnt/data/qemu/img"
       - "pool-autostart default"
       - "pool-start default"

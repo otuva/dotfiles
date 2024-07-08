@@ -26,6 +26,7 @@ command:
     create: "mkdir -p" # create directories required by things
     remove: "rm -rf" # scary :P / remove before stow
     rmbrowser: "rm -r"
+    rmdotbash: "rm"
   system:
     config: "sudo cp" # copy files to various places
     stow: "stow -t ~"
@@ -61,6 +62,7 @@ description:
     create: "create necessary directories for operations" # create directories required by things
     remove: "remove dotfile locations before stow" # scary :P / remove before stow
     rmbrowser: "remove browser artifacts. might be destructive"
+    rmdotbash: "remove bash dot files under home. might be destructive"
   system:
     config: "copy system config files to their locations" # copy files to various places
     stow: "use stow for dotfiles. might require directory.remove beforehand"
@@ -207,6 +209,11 @@ action:
       - "$HOME/.config/microsoft-edge-dev"
       - "$HOME/.config/microsoft-edge-beta"
       - "$HOME/.mozilla"
+    rmdotbash:
+      - "$HOME/.bash_history"
+      - "$HOME/.bash_logout"
+      - "$HOME/.bash_profile"
+      - "$HOME/.bashrc"
   system:
     config:
       - "_/zprofile /etc/zprofile"

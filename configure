@@ -7,7 +7,7 @@ import argparse
 # ------------------------------------------
 # --------------argument-parse--------------
 # ------------------------------------------
-parser = argparse.ArgumentParser(description='Configure the system')
+parser = argparse.ArgumentParser(description='Configure fedora silverblue')
 parser.add_argument("-l",
                     "--list",
                     help="List every command you can execute",

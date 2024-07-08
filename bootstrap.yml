@@ -253,10 +253,13 @@ action:
       - "virtqemud"
     dfpool:
       - "pool-destroy default"
-      - "pool-undefine default && mkdir -p /var/mnt/data/qemu/img"
+      - "pool-undefine default && mkdir -p /var/mnt/data/qemu/img && mkdir /var/mnt/data/qemu/iso"
       - "pool-define-as --name default --type dir --target /var/mnt/data/qemu/img"
+      - "pool-define-as --name iso --type dir --target /var/mnt/data/qemu/iso"
       - "pool-autostart default"
+      - "pool-autostart iso"
       - "pool-start default"
+      - "pool-start iso"
     mvconfig:
       - "mv $HOME/.config/libvirt /var/mnt/data/qemu/"
       - "ln -s /var/mnt/data/qemu/libvirt $HOME/.config/libvirt"

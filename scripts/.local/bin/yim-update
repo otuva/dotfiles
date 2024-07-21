@@ -13,6 +13,10 @@ TMP="/tmp/gta-patch"
 GAME_DIR="/var/mnt/data/games/steam/SteamLibrary/steamapps/common/Grand Theft Auto V"
 SCRP_DIR="$GAME_DIR/scripts"
 
+# original dll
+BINK_DLL="$GAME_DIR/bink2w64.dll"
+BINK_DLL_HOOKED="$GAME_DIR/bink2w64Hooked.dll"
+
 # download urls
 URL_YIM_DLL="https://github.com/YimMenu/YimMenu/releases/download/nightly/YimMenu.dll"
 URL_ASI_LDR="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v4.68/Ultimate-ASI-Loader_x64.zip"
@@ -78,6 +82,10 @@ cp -v "$TMP_YIM" "$NEW_YIM"
 cp -v --backup=numbered "$NEW_YIM" "$SCRP_DIR"
 
 if [[ "$UPDATE_ASI" == "true" ]]; then
+    if [[ ! -f "$BINK_DLL_HOOKED" ]]; then
+      echo && echo "First run. Renaming original file."
+      mv -v "$BINK_DLL" "$BINK_DLL_HOOKED"
+    fi
     echo && echo "Also updating ASI Loader"
     unzip -u "$TMP_ASI" -d "$TMP"
     cp -v "$TMP_ASI_DLL" "$NEW_ASI"

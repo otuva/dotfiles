@@ -1,0 +1,86 @@
+#!/bin/bash
+set -e
+
+echo "=========================================="
+echo "Update YimMenu"
+echo "  Use -u to update YimMenu"
+echo "  Use -r to remove and download files again"
+echo "  Use -a to update ASI Loader too"
+echo "==========================================" && echo
+
+# metavars
+TMP="/tmp/gta-patch"
+GAME_DIR="/var/mnt/data/games/steam/SteamLibrary/steamapps/common/Grand Theft Auto V"
+SCRP_DIR="$GAME_DIR/scripts"
+
+# download urls
+URL_YIM_DLL="https://github.com/YimMenu/YimMenu/releases/download/nightly/YimMenu.dll"
+URL_ASI_LDR="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v4.68/Ultimate-ASI-Loader_x64.zip"
+
+# temporary files
+TMP_YIM="$TMP/YimMenu.dll"
+TMP_ASI="$TMP/ASI.zip"
+TMP_ASI_DLL="$TMP/dinput8.dll"
+
+# new names
+NEW_YIM="$TMP/YimMenu.asi"
+NEW_ASI="$TMP/bink2w64.dll"
+
+# checks for parameters
+UPDATE_ASI="false"
+SHOULD_RUN="false"
+
+# if -r flag is given delete files to update
+while getopts ":ura" opt; do
+  case $opt in
+    u)
+      SHOULD_RUN="true"
+      ;;
+    r)
+      echo "Removing old files"
+      rm -f -v "$TMP_YIM"
+      rm -f -v "$TMP_ASI"
+      ;;
+    a)
+      UPDATE_ASI="true"
+      ;;
+  esac
+done
+
+# -u flag
+if [[ "$SHOULD_RUN" == "false" ]]; then
+    echo "Flag -u is required to run." && echo
+    exit 1
+fi
+
+# check if game dir exists
+if [[ ! -d "$GAME_DIR" ]]; then
+    echo "Game directory does not exists. Update and run again." && echo
+    exit 1
+fi
+
+# create required directories
+mkdir -p -v "$SCRP_DIR"
+mkdir -p -v "$TMP"
+
+# download yim if not exists
+if [[ ! -f "$TMP_YIM" ]]; then
+    echo && wget "$URL_YIM_DLL" -O "$TMP_YIM" && echo
+fi
+
+# download asi if not exists
+if [[ ! -f "$TMP_ASI" && "$UPDATE_ASI" == "true" ]]; then
+    echo && wget "$URL_ASI_LDR" -O "$TMP_ASI" && echo
+fi
+
+# prepare and move 
+cp -v "$TMP_YIM" "$NEW_YIM"
+cp -v --backup=numbered "$NEW_YIM" "$SCRP_DIR"
+
+if [[ "$UPDATE_ASI" == "true" ]]; then
+    echo && echo "Also updating ASI Loader"
+    unzip -u "$TMP_ASI" -d "$TMP"
+    cp -v "$TMP_ASI_DLL" "$NEW_ASI"
+    cp -v --backup=numbered "$NEW_ASI" "$GAME_DIR"
+    echo
+fi

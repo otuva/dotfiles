@@ -6,7 +6,7 @@ echo "Update YimMenu"
 echo "  Use -u to update YimMenu"
 echo "  Use -r to remove and download files again"
 echo "  Use -a to update ASI Loader too"
-echo "==========================================" && echo
+echo "=========================================="
 
 # metavars
 TMP="/tmp/gta-patch"
@@ -19,6 +19,7 @@ BINK_DLL_HOOKED="$GAME_DIR/bink2w64Hooked.dll"
 
 # download urls
 URL_YIM_DLL="https://github.com/YimMenu/YimMenu/releases/download/nightly/YimMenu.dll"
+URL_YIM_RLS="https://api.github.com/repos/YimMenu/YimMenu/releases/latest"
 URL_ASI_LDR="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v4.68/Ultimate-ASI-Loader_x64.zip"
 
 # temporary files
@@ -53,8 +54,10 @@ done
 
 # -u flag
 if [[ "$SHOULD_RUN" == "false" ]]; then
-    echo "Flag -u is required to run." && echo
-    exit 1
+    LATEST_RLS=$(curl -s "$URL_YIM_RLS" | jq -r '.published_at')
+    echo "Latest release was $(( ($(date +%s) - $(date --date="$LATEST_RLS" +%s))/3600 )) hours ago" 
+    echo "==========================================" && echo
+    exit 99
 fi
 
 # check if game dir exists

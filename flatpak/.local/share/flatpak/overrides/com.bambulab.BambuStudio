@@ -1,0 +1,3 @@
+[Context]
+filesystems=!xdg-run/gvfs;!/run/media;!/media;!home
+persistent=.

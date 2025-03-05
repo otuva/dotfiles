@@ -1,3 +1,2 @@
 [Context]
 filesystems=!home
-persistent=Downloads;.pki

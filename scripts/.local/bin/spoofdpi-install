@@ -1,0 +1,19 @@
+#!/bin/bash
+
+tagname=$(curl -s "https://api.github.com/repos/xvzc/SpoofDPI/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+
+os=$(uname)
+architecture=""
+case $(uname -m) in
+    i386)   architecture="386" ;;
+    i686)   architecture="386" ;;
+    x86_64) architecture="amd64" ;;
+    arm)    dpkg --print-architecture | grep -q "arm64" && architecture="arm64" || architecture="arm" ;;
+esac
+filename="spoofdpi-$os-$architecture.tar.gz"
+
+cd $(dirname "$0")
+
+curl -OL "https://github.com/xvzc/SpoofDPI/releases/download/$tagname/$filename"
+
+tar -xzvf $filename && rm -rf $filename

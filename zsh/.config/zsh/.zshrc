@@ -75,6 +75,7 @@ alias ip="ip -c -h -p"
 alias random-string="openssl rand -base64 16"
 alias rm="rm -I"
 alias wget="wget --hsts-file=${XDG_DATA_HOME}/wget-hsts"
+alias steam="xhost +SI:localuser:steam && su - steam"
 export EDITOR='/usr/bin/nano'
 export GPG_TTY=$(tty)
 

@@ -1,7 +1,2 @@
 [Context]
-features=!bluetooth
-filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord;/run/media/tfp/GameBackups;/mnt/data/games/steam
-
-[Environment]
-HISTFILE=/home/tfp/.bash_history
-STEAM_FORCE_DESKTOPUI_SCALING=1.25
+filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord;xdg-run/pipewire-0

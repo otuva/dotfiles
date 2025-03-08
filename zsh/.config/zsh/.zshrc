@@ -7,6 +7,10 @@
 #                             #
 ###############################
 
+# ------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------zshrc----------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------
+
 # ------------------------------------------------------------
 # -------------------------oh-my-zsh--------------------------
 # ------------------------------------------------------------
@@ -19,7 +23,7 @@ HYPHEN_INSENSITIVE="true" # hyphen-insensitive completion. _ and - will be inter
 
 COMPLETION_WAITING_DOTS="true" # display red dots whilst waiting for completion.
 
-plugins=(git) # Standard plugins can be found in $ZSH/plugins/
+plugins=() # Standard plugins can be found in $ZSH/plugins/
 
 HISTSIZE=999999999
 
@@ -31,7 +35,12 @@ SAVEHIST=$HISTSIZE
 
 wayback()
 {
-    spn -a "$(secret-tool lookup wayback accesskey):$(secret-tool lookup wayback secretkey)" "$1"
+  spn -a "$(secret-tool lookup wayback accesskey):$(secret-tool lookup wayback secretkey)" "$1"
+}
+
+cheat()
+{
+  curl -Ls "https://cheat.sh/$1"
 }
 
 # ------------------------------------------------------------
@@ -59,24 +68,16 @@ source $ZDOTDIR/ext/zsh-autosuggestions/zsh-autosuggestions.zsh
 # -----------------------export-&-alias-----------------------
 # ------------------------------------------------------------
 
+alias cp="cp -i"
+alias free='free -m'
+alias gitvisual="git log --graph --decorate --oneline"
+alias ip="ip -c -h -p"
+alias random-string="openssl rand -base64 16"
+alias rm="rm -I"
+alias wget="wget --hsts-file=${XDG_DATA_HOME}/wget-hsts"
 export EDITOR='/usr/bin/nano'
 export GPG_TTY=$(tty)
 
-alias ip="ip -c -h -p"
-alias cp="cp -i"                                # confirm before overwriting something
-alias rm="rm -I"                                # confirm before f-up
-alias free='free -m'                            # show sizes in mb
-alias gitvisual="git log --graph --decorate --oneline"
-alias random-string="openssl rand -base64 16"
-
-alias wget="wget --hsts-file=${XDG_DATA_HOME}/wget-hsts"
-# alias ls="eza"
-# alias df="duf"
-# alias cat="bat"
-# alias grep="rg"
-# alias find="fd"
-# alias docker="sudo docker"
-
-# ------------------------------------------------------------
-# -------------------------end-zshrc--------------------------
-# ------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------crhsz----------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------

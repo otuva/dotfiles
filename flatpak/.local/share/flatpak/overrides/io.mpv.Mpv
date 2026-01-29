@@ -1,0 +1,2 @@
+[Context]
+filesystems=!xdg-run/pipewire-0;xdg-run/pipewire-1:ro

@@ -1,12 +1,12 @@
 [Context]
 sockets=!ssh-auth
-filesystems=!xdg-run/keyring;!host
+filesystems=!home;!host
 persistent=.
 
 [Environment]
-PATH=/app/bin:/usr/bin:/home/tfp/Android/Sdk/platform-tools:/home/tfp/Android/Sdk/emulator:/home/tfp/flutter/bin
 HISTFILE=/home/tfp/.bash_history
+PATH=/app/bin:/usr/bin:/home/tfp/Android/Sdk/platform-tools:/home/tfp/Android/Sdk/emulator:/home/tfp/flutter/bin
 
 [Session Bus Policy]
-org.freedesktop.Flatpak=none
 org.freedesktop.secrets=none
+org.freedesktop.Flatpak=none

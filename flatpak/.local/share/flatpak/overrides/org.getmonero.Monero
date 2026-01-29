@@ -1,8 +1,8 @@
 [Context]
 sockets=!x11
 devices=!all;dri
-filesystems=!~/Monero;!xdg-config/kdeglobals
-persistent=.shared-ringdb;Monero
+filesystems=!xdg-config/kdeglobals
+persistent=.shared-ringdb
 
 [Environment]
 QT_QPA_PLATFORM=wayland

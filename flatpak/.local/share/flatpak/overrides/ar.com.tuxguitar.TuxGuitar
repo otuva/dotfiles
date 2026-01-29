@@ -1,2 +1,2 @@
 [Context]
-filesystems=!home
+filesystems=/mnt/data/backup/rocksmith/dlc-custom;!home
